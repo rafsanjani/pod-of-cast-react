@@ -1,0 +1,56 @@
+header {
+    height: 70px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.top-buttons {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-buttons div {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px 20px;
+}
+
+.recent-episodes-btn {
+    border-radius: 8px;
+    border: 2px solid black;
+    transition: all 0.3s ease 0s
+}
+
+.recent-episodes-btn:hover {
+    transform: translateY(-5px);
+}
+
+ul li a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: rgba(0, 0, 0, 0.15);
+    transition: all 0.5s;
+}
+
+ul li a:hover::after {;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li a {
+    padding: 0 20px;
+    display: inline-block;
+}

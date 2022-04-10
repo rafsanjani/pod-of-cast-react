@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { Landing } from "./pages/landing/landing";
+import { App } from "./app/app";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Landing />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

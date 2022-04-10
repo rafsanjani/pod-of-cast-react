@@ -1,20 +1,71 @@
 import React from "react";
-import "./podcast.css";
-import logo from "../images/logo.svg";
-import hero_shape_swirl from "../images/hero-shape-swirl.svg";
-import stars from "../images/stars.svg";
-import { SocialLogos } from "./social-logos/social-logos";
-import { ImageList } from "./image-list/image-list";
-import { Testimonial, Testimonials } from "./testimonial/testimonial";
-import avatar_1 from "../images/avatar/avatar-1.png";
-import avatar_2 from "../images/avatar/avatar-2.png";
-import avatar_3 from "../images/avatar/avatar-3.png";
-import spotify from "../images/platforms/spotify.png";
-import googlePodcast from "../images/platforms/google-podcast.png";
-import applePodcast from "../images/platforms/apple-podcast.svg";
-import { Benefits } from "./benefits/benefits";
+import "./landing.css";
+import logo from "../../images/logo.svg";
+import hero_shape_swirl from "../../images/hero-shape-swirl.svg";
+import stars from "../../images/stars.svg";
+import { Testimonial, Testimonials } from "../testimonial/testimonial";
+import avatar_1 from "../../images/avatar/avatar-1.png";
+import avatar_2 from "../../images/avatar/avatar-2.png";
+import avatar_3 from "../../images/avatar/avatar-3.png";
+import spotify from "../../images/platforms/spotify.png";
+import googlePodcast from "../../images/platforms/google-podcast.png";
+import google from "../../images/platforms/google-podcast.png";
+import applePodcast from "../../images/platforms/apple-podcast.svg";
+import { Benefits } from "../benefits/benefits";
+import perplexed from "../../images/cover/perplexed-mind.png";
+import self_confidence from "../../images/cover/self-confidence.png";
+import social_class from "../../images/cover/social-class.png";
+import tesla_autopilot from "../../images/cover/tesla-autopilot.png";
+import women_rights from "../../images/cover/women-rights.png";
+import youtube from "../../images/platforms/youtube.png";
 
-export function Podcast() {
+function ImageList() {
+  const urls: string[] = [
+    perplexed,
+    self_confidence,
+    social_class,
+    tesla_autopilot,
+    women_rights,
+  ];
+  const imageItems = urls.map((image) => {
+    return (
+      <li key={image}>
+        <img
+          className="lg:h-52 lg:w-52 md:w-40 md:h-40 sm:w-20 sm:h-20 xs:h-20 xs:w-20"
+          src={image}
+          alt="tile element"
+        />
+      </li>
+    );
+  });
+
+  return (
+    <div className="tiles">
+      <ul> {imageItems}</ul>
+    </div>
+  );
+}
+
+function SocialLogos() {
+  return (
+    <div className="platforms">
+      <h1 className="font-bold tracking-tightest">Supported by</h1>
+      <ul className="social-logos">
+        <li>
+          <img src={google} alt="Google" />
+        </li>
+        <li>
+          <img src={spotify} alt="Google" />
+        </li>
+        <li>
+          <img src={youtube} alt="Google" />
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+export function Landing() {
   let testimonials: Testimonial[] = [
     {
       name: "Luna LoveGood",

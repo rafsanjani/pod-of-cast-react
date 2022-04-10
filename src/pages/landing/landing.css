@@ -154,3 +154,37 @@ ul li a:hover::after {;
 .card-navigation {
     height: 56px;
 }
+
+
+.tiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tiles img {
+    border-radius: 12px;
+    transition: all 0.3s ease 0s;
+    margin-right: 20px;
+}
+
+.tiles img:hover {
+    transform: scale(1.1);
+}
+
+.social-logos {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+.platforms {
+    border-top: 1px solid #4D4D4D;
+    border-bottom: 1px solid #4D4D4D;
+    height: 90px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 20px 12px;
+}

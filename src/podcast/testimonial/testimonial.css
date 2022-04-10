@@ -1,0 +1,93 @@
+
+.contact {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+}
+
+.contact h6 {
+    margin-left: 15px;
+    margin-right: 15px;
+    align-self: center;
+}
+
+.contact .social {
+    width: 150px;
+    height: 50px;
+    align-self: center;
+}
+
+.contact .avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.card p {
+    text-align: justify;
+}
+
+.testimonial {
+    padding: 50px;
+    background: #EDF3F7;
+}
+
+.testimonial header {
+    display: grid;
+    height: 150px;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 1fr 3fr;
+}
+
+.testimonial header h1 {
+    grid-column: 2/ 3;
+    justify-self: start;
+    align-self: end;
+}
+
+
+.testimonial img {
+    width: 105px;
+    height: 105px;
+    justify-self: end;
+    align-self: start;
+}
+
+.testimonial h3 {
+    grid-column: 1/ 3;
+    padding-top: 20px;
+    font-size: 23px;
+}
+
+.testimonial-list {
+    align-content: center;
+    width: calc(570px * 7);
+    display: flex;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    justify-items: center;
+    max-width: 100vw;
+    overflow: scroll;
+    height: 70%;
+    transition: all .3ms;
+}
+
+.card-navigation {
+    display: flex;
+    height: 50px;
+    justify-self: center;
+}
+
+.card-navigation img {
+    height: 100%;
+    transition: all 0.2s ease-in;
+    width: 40px;
+}
+
+.card-navigation img:hover {
+    transform: scale(1.2);
+}

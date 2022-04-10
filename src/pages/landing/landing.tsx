@@ -3,7 +3,7 @@ import "./landing.css";
 import logo from "../../images/logo.svg";
 import hero_shape_swirl from "../../images/hero-shape-swirl.svg";
 import stars from "../../images/stars.svg";
-import { Testimonial, Testimonials } from "../testimonial/testimonial";
+import { Testimonials } from "../testimonial/testimonial";
 import avatar_1 from "../../images/avatar/avatar-1.png";
 import avatar_2 from "../../images/avatar/avatar-2.png";
 import avatar_3 from "../../images/avatar/avatar-3.png";
@@ -18,6 +18,7 @@ import social_class from "../../images/cover/social-class.png";
 import tesla_autopilot from "../../images/cover/tesla-autopilot.png";
 import women_rights from "../../images/cover/women-rights.png";
 import youtube from "../../images/platforms/youtube.png";
+import { RecentEpisodes } from "../recent-episodes/recent-episodes";
 
 function ImageList() {
   const urls: string[] = [
@@ -65,8 +66,8 @@ function SocialLogos() {
   );
 }
 
-export function Landing() {
-  let testimonials: Testimonial[] = [
+const testimonials = () => {
+  return [
     {
       name: "Luna LoveGood",
       platform: spotify,
@@ -92,7 +93,9 @@ export function Landing() {
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
     },
   ];
+};
 
+export function Landing() {
   return (
     <div className="App">
       <header>
@@ -146,10 +149,9 @@ export function Landing() {
           <ImageList />
           <SocialLogos />
         </section>
-        <section>
-          <Testimonials props={testimonials} />
-        </section>
+        <Testimonials props={testimonials()} />
         <Benefits />
+        <RecentEpisodes />
       </div>
     </div>
   );

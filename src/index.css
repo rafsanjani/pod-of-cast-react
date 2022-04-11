@@ -7,5 +7,14 @@ body {
     text-align: center;
     background: #F7EDE8;
     margin: 0;
+}
+
+html {
     scroll-behavior: smooth;
+    min-width: 850px;
+}
+
+h3 {
+    font-size: 23px;
+    padding-top: 20px;
 }

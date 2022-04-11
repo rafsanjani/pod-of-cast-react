@@ -2,13 +2,13 @@
     padding-top: 50px;
     background: #ffffff;
     align-items: center;
-    height: 100vh;
     display: flex;
 }
 
 .benefits header {
     display: flex;
     height: 150px;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
 }
@@ -18,11 +18,14 @@
     align-self: start;
 }
 
+.benefits header div {
+    display: flex;
+}
+
 .benefits-grid {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    height: 70%;
     width: 100vw;
 }
 
@@ -30,7 +33,7 @@
 .benefits header img {
     width: 105px;
     align-self: center;
-    margin-top: -150px;
+    margin-top: -80px;
     margin-left: -80px;
     height: 105px;
 }

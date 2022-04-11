@@ -67,10 +67,13 @@ export function Benefits() {
   return (
     <section className="benefits">
       <header>
-        <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">
-          Membership benefits
-        </h1>
-        <img src={scribble} alt="" />
+        <div>
+          <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">
+            Membership benefits
+          </h1>
+          <img src={scribble} alt="" />
+        </div>
+        <h3>Become our sponsor and get all benefits</h3>
       </header>
       <BenefitsGrid benefits={benefits} />
       <button className="button"> See Pricing</button>

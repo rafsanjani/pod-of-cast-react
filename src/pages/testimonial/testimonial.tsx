@@ -50,10 +50,12 @@ export function Testimonials(props: TestimonialProps) {
     return (
         <section className="testimonial">
             <header>
-                <img src={sparkles} alt=""/>
-                <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">
-                    What our listeners say
-                </h1>
+                <div>
+                    <img src={sparkles} alt=""/>
+                    <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">
+                        What our listeners say
+                    </h1>
+                </div>
                 <h3>Their experience throughout every platform</h3>
             </header>
             <div className="testimonials-wrapper" ref={listRef}>

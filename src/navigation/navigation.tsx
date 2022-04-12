@@ -5,7 +5,7 @@ import "./navigation.css";
 export function Navigation() {
     return (
         <header>
-            <img src={logo} alt="logo"/>
+            <img className="logo" src={logo} alt="logo"/>
             <nav>
                 <ul>
                     <li>
@@ -23,7 +23,7 @@ export function Navigation() {
                 <a href="#">
                     <div className="recent-episodes-btn">Recent Episodes</div>
                 </a>
-                <button className="button">Subscribe</button>
+                <button className="button subscribe-button">Subscribe</button>
             </div>
         </header>
     );

@@ -11,6 +11,7 @@ import avatar_3 from "../images/avatar/avatar-3.png";
 import {Navigation} from "../navigation/navigation";
 import {Benefits} from "../pages/benefits/benefits";
 import {RecentEpisodes} from "../pages/recent-episodes/recent-episodes";
+import {BecomeOurSponsor} from "../pages/become-our-sponsor/become-our-sponsor";
 
 export function App() {
     return (
@@ -21,6 +22,7 @@ export function App() {
                 <Testimonials props={testimonials()}/>
                 <Benefits/>
                 <RecentEpisodes/>
+                <BecomeOurSponsor/>
             </div>
         </div>
     );

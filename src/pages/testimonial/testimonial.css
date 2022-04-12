@@ -1,8 +1,7 @@
 .testimonial {
-    padding: 50px;
     height: 100vh;
     background: #EDF3F7;
-    overflow: auto;
+    padding: 50px;
 }
 
 .contact {
@@ -57,15 +56,21 @@
 
 .testimonial header {
     display: grid;
-    height: 150px;
+    height: 250px;
     align-content: center;
     justify-content: center;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.testimonial header div {
+    display: flex;
+    height: 100%;
+    justify-content: center;
 }
 
 .testimonial header h1 {
-    grid-column: 2/ 3;
     justify-self: start;
+    grid-column-start: 1;
     align-self: end;
 }
 
@@ -73,13 +78,14 @@
 .testimonial header img {
     width: 105px;
     height: 105px;
-    justify-self: end;
-    align-self: start;
+    margin-bottom: 30px;
+    justify-self: center;
+    grid-column-start: 1;
+    align-self: end;
 }
 
 .testimonial h3 {
     grid-column: 1/ 3;
-    padding-bottom: 60px;
     font-size: 23px;
 }
 
@@ -93,6 +99,8 @@
     display: flex;
     justify-items: center;
     max-width: 100vw;
+    align-self: center;
+    width: 95%;
     height: 70%;
     overflow: scroll;
     transition: all .3ms;
@@ -119,7 +127,7 @@
     .card-navigation {
         display: none;
     }
-
+    
     .testimonials-wrapper {
         height: 80%;
     }

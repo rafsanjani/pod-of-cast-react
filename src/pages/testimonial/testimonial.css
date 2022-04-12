@@ -6,7 +6,7 @@
 }
 
 .contact {
-    margin-top: 15px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     font-size: 14px;
@@ -18,7 +18,6 @@
     background: #FFFFFF;
     align-self: center;
     flex-direction: column;
-    height: 360px;
     border-radius: 8px;
     justify-content: start;
     width: 570px;
@@ -71,7 +70,7 @@
 }
 
 
-.testimonial img {
+.testimonial header img {
     width: 105px;
     height: 105px;
     justify-self: end;
@@ -81,6 +80,7 @@
 .testimonial h3 {
     grid-column: 1/ 3;
     padding-bottom: 60px;
+    font-size: 23px;
 }
 
 .testimonial-list {
@@ -116,6 +116,10 @@
 }
 
 @media only screen and (max-width: 1024px) {
+    .card-navigation {
+        display: none;
+    }
+
     .testimonials-wrapper {
         height: 80%;
     }
@@ -130,8 +134,8 @@
 
     .testimonial-card {
         height: 250px;
-        padding: 20px;
-        margin: 30px;
+        padding: 10px;
+        margin: 10px;
         width: 90%;
     }
 
@@ -146,5 +150,22 @@
     .contact .avatar {
         width: 30px;
         height: 30px;
+    }
+
+    .testimonial header img {
+        width: 50px;
+        height: 50px;
+        justify-self: end;
+        align-self: start;
+    }
+
+    .testimonial h3 {
+        font-size: 16px;
+        padding-bottom: 0;
+    }
+
+    .contact h6 {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }

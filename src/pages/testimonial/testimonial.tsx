@@ -37,8 +37,10 @@ export function Testimonials(props: TestimonialProps) {
                 <h1 className="font-bold">“</h1>
                 <p>{testimonial.text}</p>
                 <div className="contact">
-                    <img className="avatar" src={testimonial.avatar} alt="avatar-1"/>
-                    <h6>{testimonial.name}</h6>
+                    <div className="flex flex-row">
+                        <img className="avatar" src={testimonial.avatar} alt="avatar-1"/>
+                        <h6>{testimonial.name}</h6>
+                    </div>
                     <img className="social" src={testimonial.platform} alt="spotify"/>
                 </div>
             </div>

@@ -15,6 +15,7 @@ section {
 .button {
     margin-left: 10px;
     width: 136px;
+    height: 56px;
     border-radius: 8px;
     background: #000;
     box-shadow: 0 5px 10px rgba(29, 37, 31, 0.4);
@@ -24,4 +25,8 @@ section {
 
 .button:hover {
     transform: translateY(-5px);
+}
+
+@media only screen and (max-width: 1024px) {
+
 }

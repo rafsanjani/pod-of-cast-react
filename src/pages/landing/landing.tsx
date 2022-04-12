@@ -13,13 +13,11 @@ import youtube from "../../images/platforms/youtube.svg";
 
 export function Landing() {
     return (
-        <section>
+        <section className="landing">
             <div className="hero">
-                <div className="spring">
-                    <img src={hero_shape_swirl} alt="spring"/>
-                </div>
+                <img className="spring" src={hero_shape_swirl} alt="spring"/>
                 <div className="hero-content">
-                    <h1 className="tracking-tightest lg:text-6xl md:text-4xl sm:text-4xl xs:text-4xl">
+                    <h1 className="tracking-tightest text-4xl lg:text-6xl md:text-4xl">
                         Your daily
                         <br/>
                         <span>Podcast</span>
@@ -29,9 +27,7 @@ export function Landing() {
                     </p>
                     <button className="button">Subscribe</button>
                 </div>
-                <div className="stars">
-                    <img src={stars} alt="stars"/>
-                </div>
+                <img className="stars" src={stars} alt="stars"/>
             </div>
             <ImageList/>
             <SocialLogos/>

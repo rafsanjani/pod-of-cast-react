@@ -23,9 +23,7 @@ export function Navigation() {
                 <a href="#">
                     <div className="recent-episodes-btn">Recent Episodes</div>
                 </a>
-                <div className="button">
-                    <button>Subscribe</button>
-                </div>
+                <button className="button">Subscribe</button>
             </div>
         </header>
     );

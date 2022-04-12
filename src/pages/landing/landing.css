@@ -1,20 +1,32 @@
+.landing {
+    max-height: 100vh;
+}
+
 .hero {
-    display: flex;
+    display: grid;
     max-height: 70%;
-    justify-content: space-around;
-    align-items: center;
+    grid-template: repeat(1, 1fr)/ repeat(3, 1fr);
     width: 100%;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.hero img {
+    margin-bottom: 50px;
 }
 
 .stars {
-    padding-right: 40px;
+    justify-self: end;
+}
+
+.spring {
+    justify-self: start;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 60px;
     align-items: center;
 }
 
@@ -63,13 +75,14 @@
 .platforms {
     border-top: 1px solid #4D4D4D;
     border-bottom: 1px solid #4D4D4D;
-    width: 100%;
+    width: 90%;
     flex-direction: row;
     justify-content: center;
+    align-self: center;
     align-items: center;
     display: flex;
-    margin: 20px 12px;
-    padding: 20px 0;
+    margin: 50px 12px;
+    padding: 20px 12px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -87,4 +100,10 @@
         margin-top: 5px;
         height: 25px;
     }
+
+    .hero img {
+        width: 100px;
+        height: 100px;
+    }
+
 }

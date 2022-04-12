@@ -147,7 +147,7 @@ hr {
     }
 }
 
-.button {
+.recent-episodes .button {
     width: 200px;
     height: 56px;
     align-self: center;
@@ -182,5 +182,17 @@ hr {
 
     .description p {
         font-size: 12px;
+    }
+
+    .top {
+        height: 70%;
+    }
+
+    .top .image {
+        width: 130px;
+    }
+
+    button {
+        margin-top: 30px;
     }
 }

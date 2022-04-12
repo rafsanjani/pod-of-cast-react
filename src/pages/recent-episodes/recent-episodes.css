@@ -1,28 +1,39 @@
 .recent-episodes {
     padding: 30px;
     display: flex;
+    width: 100vw;
     flex-direction: column;
 }
 
 .recent-episodes-grid {
-    border: 1px solid green;
     align-content: center;
     padding: 50px;
-    overflow: scroll;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     grid-gap: 20px;
 }
 
 .recent-episodes-card {
-    width: 100%;
-    height: 100%;
+    width: 570px;
+    height: 250px;
     padding: 20px;
+    background: #fff;
     border: 2px solid #000;
     justify-self: center;
     align-self: center;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
+}
+
+.footer-image {
+    width: 30px;
+    height: 30px;
+    margin: -5px;
+    border: 2px solid #F7EDE8;
+    border-radius: 50%;
 }
 
 .recent-episodes-card h4 {
@@ -35,6 +46,7 @@
     margin: 0;
     padding: 0;
     font-weight: bold;
+    text-align: start;
     color: #CD4631;
     font-size: 20px;
 }
@@ -45,7 +57,7 @@
 
 
 .top {
-    /*height: 80%;*/
+    height: 80%;
     display: flex;
     flex-direction: row;
 }
@@ -88,11 +100,87 @@ hr {
     font-size: 12px;
     justify-content: center;
     align-items: center;
-    width: 73px;
+    padding: 10px;
 }
 
 .tags li {
     border: 1px solid #4D4D4D;
     border-radius: 4px;
     margin-right: 10px;
+}
+
+
+.hosts {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.hosts p {
+    margin: 0 10px;
+}
+
+.description p {
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .recent-episodes-grid {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+    }
+
+    .recent-episodes-card h3 {
+        font-size: 14px;
+    }
+
+    .recent-episodes-card h4 {
+        font-size: 10px;
+    }
+
+    .top .description {
+        margin-left: 10px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+.button {
+    width: 200px;
+    height: 56px;
+    align-self: center;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .recent-episodes {
+        padding: 10px;
+    }
+
+    .recent-episodes-grid {
+        padding: 1px;
+    }
+
+    .recent-episodes-card h3 {
+        font-size: 14px;
+    }
+
+    .recent-episodes-card {
+        width: 100%;
+        height: 200px;
+    }
+
+    .recent-episodes-card h4 {
+        font-size: 10px;
+    }
+
+    .top .description {
+        margin-left: 10px;
+    }
+
+    .description p {
+        font-size: 12px;
+    }
 }

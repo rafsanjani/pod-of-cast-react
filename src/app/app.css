@@ -10,7 +10,6 @@
 section {
     display: flex;
     flex-direction: column;
-    min-width: 700px;
 }
 
 .button {

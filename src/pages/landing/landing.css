@@ -38,32 +38,6 @@
     width: 136px;
 }
 
-.card {
-    padding: 30px;
-    display: flex;
-    background: #FFFFFF;
-    align-self: center;
-    flex-direction: column;
-    height: 360px;
-    border-radius: 8px;
-    justify-content: start;
-    width: 570px;
-    margin-right: 15px;
-}
-
-.card h1 {
-    font-size: 96px;
-    align-self: start;
-    letter-spacing: -2px;
-    color: #CD4631;
-    height: 115px;
-}
-
-.card-navigation {
-    height: 56px;
-}
-
-
 .tiles {
     display: flex;
     flex-direction: row;
@@ -80,19 +54,37 @@
     transform: scale(1.1);
 }
 
-.social-logos {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
+.social-logos img {
+    width: 198px;
+    height: 30px;
 }
+
 
 .platforms {
     border-top: 1px solid #4D4D4D;
     border-bottom: 1px solid #4D4D4D;
-    height: 90px;
     width: 100%;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     display: flex;
     margin: 20px 12px;
+    padding: 20px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .platforms {
+        flex-direction: column;
+        padding: 5px 0;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .social-logos img {
+        width: 130px;
+        margin-top: 5px;
+        height: 25px;
+    }
 }

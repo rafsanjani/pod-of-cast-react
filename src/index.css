@@ -5,6 +5,9 @@
 body {
     font-family: 'Montserrat Alternates', sans-serif;
     text-align: center;
+    max-width: 100vw;
+    overflow-y: scroll;
+    overflow-x: clip;
     background: #F7EDE8;
     margin: 0;
 }

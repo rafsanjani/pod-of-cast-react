@@ -1,9 +1,36 @@
+.testimonial {
+    padding: 50px;
+    height: 100vh;
+    background: #EDF3F7;
+    overflow: auto;
+}
 
 .contact {
     margin-top: 15px;
     display: flex;
     flex-direction: row;
     font-size: 14px;
+}
+
+.testimonial-card {
+    padding: 30px;
+    display: flex;
+    background: #FFFFFF;
+    align-self: center;
+    flex-direction: column;
+    height: 360px;
+    border-radius: 8px;
+    justify-content: start;
+    width: 570px;
+    margin-right: 15px;
+}
+
+.testimonial-card h1 {
+    font-size: 96px;
+    align-self: start;
+    letter-spacing: -2px;
+    color: #CD4631;
+    height: 115px;
 }
 
 .contact h6 {
@@ -20,18 +47,13 @@
 
 .contact .avatar {
     border-radius: 50%;
+    align-self: center;
     width: 50px;
     height: 50px;
 }
 
-.card p {
+.testimonial-card p {
     text-align: justify;
-}
-
-.testimonial {
-    padding: 50px;
-    height: 100vh;
-    background: #EDF3F7;
 }
 
 .testimonial header {
@@ -71,14 +93,15 @@
     display: flex;
     justify-items: center;
     max-width: 100vw;
-    overflow: scroll;
     height: 70%;
+    overflow: scroll;
     transition: all .3ms;
 }
 
 .card-navigation {
     display: flex;
     height: 50px;
+    margin: 30px;
     justify-self: center;
 }
 
@@ -90,4 +113,38 @@
 
 .card-navigation img:hover {
     transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1024px) {
+    .testimonials-wrapper {
+        height: 80%;
+    }
+
+    .testimonial-list {
+        align-content: center;
+        flex-direction: column;
+        display: flex;
+        height: calc(250px * 4);
+    }
+
+
+    .testimonial-card {
+        height: 250px;
+        padding: 20px;
+        margin: 30px;
+        width: 90%;
+    }
+
+    .testimonial-card h1 {
+        font-size: 70px;
+        height: 60px;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact .avatar {
+        width: 30px;
+        height: 30px;
+    }
 }

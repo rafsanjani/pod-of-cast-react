@@ -1,6 +1,6 @@
 .benefits {
-    padding-top: 50px;
     background: #ffffff;
+    padding: 30px;
     align-items: center;
     display: flex;
 }
@@ -24,18 +24,17 @@
 
 .benefits-grid {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template: repeat(2, 1fr)/ repeat(3, 1fr);
     width: 100vw;
 }
 
 
 .benefits header img {
-    width: 105px;
+    width: 150px;
     align-self: center;
     margin-top: -80px;
     margin-left: -80px;
-    height: 105px;
+    height: 150px;
 }
 
 .benefits-grid .benefits-card {
@@ -60,7 +59,27 @@
 }
 
 .benefits-card img {
-    height: 40px;
-    width: 40px;
+    height: 78px;
+    width: 78px;
     margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .benefits-grid {
+        display: grid;
+        grid-template: repeat(1, 1fr)/ repeat(1, 1fr);
+        width: 100vw;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .benefits-card {
+        margin: 20px;
+    }
+
+    .benefits-card img {
+        margin-bottom: 0;
+    }
+
 }

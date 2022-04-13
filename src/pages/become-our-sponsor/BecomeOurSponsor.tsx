@@ -1,4 +1,4 @@
-import "./become-our-sponsor.css";
+import "./BecomeOurSponsor.css";
 
 type Membership = {
   price: number;
@@ -74,7 +74,7 @@ export function BecomeOurSponsor() {
               <div>
                 <button className="button subscribe-button">Subscribe</button>
                 <div className="tracking-tighter price">
-                  <span className="font-bold text-2xl text-red-800">
+                  <span className="font-bold lg:text-2xl text-red-800">
                     ${membership.price}
                   </span>
                   <br />
@@ -94,7 +94,7 @@ export function BecomeOurSponsor() {
                   : "whats-included"
               }
             >
-              <h3 className="font-bold">Whats included</h3>
+              <h3 className="font-bold text-2xl">Whats included</h3>
               <ul>
                 {membership.perks.map((perk, index) => {
                   return (

@@ -60,7 +60,6 @@
 
 .family {
     background: #F7EDE8;
-    border: 1.5px solid #CD4631;
 }
 
 .pricing-card div {
@@ -97,6 +96,14 @@
         padding: 10px;
     }
 
+    .pricing-card {
+        padding: 10px;
+    }
+
+    .pricing-card .price {
+        line-height: 60%;
+    }
+
     .pricing-grid {
         display: grid;
         align-self: center;
@@ -104,5 +111,18 @@
         justify-content: center;
         grid-gap: 10px;
         grid-template: repeat(6, minmax(0, 200px))/ repeat(1, minmax(0, 100vw));
+    }
+
+    .whats-included li {
+        padding-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .whats-included {
+        padding: 10px
+    }
+
+    .whats-included ul {
+        padding: 10px;
     }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./benefits.css";
+import "./Benfits.css";
 import scribble from "../../images/scribble.svg";
 import topic from "../../images/ic-topic.svg";
 import shiningStars from "../../images/shining-stars.svg";

@@ -1,4 +1,4 @@
-import "./About.css";
+import "./About.scss";
 import React from "react";
 import { LandingHero } from "../landing/Landing";
 
@@ -15,6 +15,26 @@ export function About() {
           <button className="button">SUBSCRIBE</button>
         </div>
       </LandingHero>
+      <div className="bottom">
+        <div>
+          <h2>
+            76<span>K</span>
+          </h2>
+          <p>Community members</p>
+        </div>
+        <div>
+          <h2>
+            76<span>K</span>
+          </h2>
+          <p>Community members</p>
+        </div>
+        <div>
+          <h2>
+            76<span>K</span>
+          </h2>
+          <p>Community members</p>
+        </div>
+      </div>
     </section>
   );
 }

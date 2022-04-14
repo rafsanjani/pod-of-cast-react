@@ -1,0 +1,51 @@
+@import "../../app/theme";
+
+.about {
+  $boxShadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
+
+  height: 100vh;
+  background: $backgroundColor;
+  align-items: center;
+  display: flex;
+
+  .about-buttons {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    width: 350px;
+  }
+
+  .outline-button {
+    width: 200px;
+    font-weight: bold;
+    box-shadow: $boxShadow;
+  }
+
+  .button {
+    font-weight: bold;
+    box-shadow: $boxShadow;
+  }
+
+  .bottom {
+    width: 90%;
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template: 1fr/ repeat(3, 1fr);
+
+    div {
+      aspect-ratio: 1.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 6px 6px 0 #CD4631;
+      border: 1px solid #000;
+      border-radius: 8px;
+
+      span {
+        color: black;
+      }
+    }
+  }
+}

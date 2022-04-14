@@ -21,7 +21,7 @@ export function Navigation() {
       </nav>
       <div className="top-buttons">
         <a href="#">
-          <div className="recent-episodes-btn">Recent Episodes</div>
+          <div className="outline-button">Recent Episodes</div>
         </a>
         <button className="button subscribe-button">Subscribe</button>
       </div>

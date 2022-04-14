@@ -23,13 +23,13 @@ header {
     padding: 8px 20px;
 }
 
-.recent-episodes-btn {
+.outline-button {
     border-radius: 8px;
     border: 2px solid black;
     transition: all 0.3s ease 0s
 }
 
-.recent-episodes-btn:hover {
+.outline-button:hover {
     transform: translateY(-5px);
 }
 
@@ -91,7 +91,6 @@ ul li a {
     }
 
     .subscribe-button {
-        background: green;
         border: 1px solid red;
         margin: 10px;
         height: 40px;

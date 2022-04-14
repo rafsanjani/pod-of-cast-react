@@ -14,24 +14,41 @@ import youtube from "../../images/platforms/youtube.svg";
 export function Landing() {
   return (
     <section className="landing">
-      <div className="hero">
-        <img className="spring" src={hero_shape_swirl} alt="spring" />
-        <div className="hero-content">
-          <h1 className="tracking-tightest text-4xl lg:text-6xl md:text-4xl">
-            Your daily
-            <br />
-            <span>Podcast</span>
-          </h1>
-          <p>
-            We cover all kinds of categories and <br />a weekly special guest.
-          </p>
-          <button className="button">Subscribe</button>
-        </div>
-        <img className="stars" src={stars} alt="stars" />
-      </div>
+      <LandingHero
+        title="Your daily"
+        subtitle="Podcast"
+        paragraph="We cover all kinds of categories and a weekly special guest"
+      >
+        <button className="button">Subscribe</button>
+      </LandingHero>
       <ImageList />
       <SocialLogos />
     </section>
+  );
+}
+
+type LandingHeroProps = {
+  title: string;
+  subtitle: string;
+  paragraph: string;
+  children: React.ReactNode;
+};
+
+export function LandingHero(props: LandingHeroProps) {
+  return (
+    <div className="hero">
+      <img className="spring" src={hero_shape_swirl} alt="spring" />
+      <div className="hero-content">
+        <h1 className="tracking-tightest text-4xl lg:text-6xl md:text-4xl">
+          {props.title}
+          <br />
+          <span>{props.subtitle}</span>
+        </h1>
+        <p>{props.paragraph}</p>
+        {props.children}
+      </div>
+      <img className="stars" src={stars} alt="stars" />
+    </div>
   );
 }
 

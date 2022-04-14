@@ -12,6 +12,8 @@ import { Navigation } from "../navigation/Navigation";
 import { Benefits } from "../pages/benefits/Benefits";
 import { RecentEpisodes } from "../pages/recent-episodes/RecentEpisodes";
 import { BecomeOurSponsor } from "../pages/become-our-sponsor/BecomeOurSponsor";
+import { Footer } from "../footer/Footer";
+import { About } from "../pages/about/About";
 
 export function App() {
   return (
@@ -23,7 +25,8 @@ export function App() {
         <Benefits />
         <RecentEpisodes />
         <BecomeOurSponsor />
-        {/*<Footer />*/}
+        <About />
+        <Footer />
       </div>
     </div>
   );

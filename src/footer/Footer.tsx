@@ -13,43 +13,45 @@ import googlePlay from "../images/platforms/google_play.svg";
 export function Footer() {
   return (
     <footer>
-      <div className="top">
-        <div className="footer-left">
-          <img className="logo" src={logo} alt="" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
-            necessitatibus?
-          </p>
-          <ul className="socials">
-            <li>
-              <img src={instagram} alt="" />
-            </li>
-            <li>
-              <img src={twitter} alt="" />
-            </li>
-            <li>
-              <img src={tiktok} alt="" />
-            </li>
+      <div className="wrapper">
+        <div className="top">
+          <div className="footer-left">
+            <img className="logo" src={logo} alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
+              necessitatibus?
+            </p>
+            <ul className="socials">
+              <li>
+                <img src={instagram} alt="" />
+              </li>
+              <li>
+                <img src={twitter} alt="" />
+              </li>
+              <li>
+                <img src={tiktok} alt="" />
+              </li>
+            </ul>
+          </div>
+          <ul>
+            <li>About</li>
+            <li className="text-red-700">Testimonials</li>
+            <li>Features</li>
           </ul>
+          <ul>
+            <li className="text-red-600">Episodes</li>
+            <li>Pricing</li>
+            <li>Blog</li>
+          </ul>
+          <div className="footer-right">
+            <p>Listen to episodes on your favorite platform:</p>
+            <SocialLogos />
+            <p>App available on</p>
+            <Platforms />
+          </div>
         </div>
-        <ul>
-          <li>About</li>
-          <li className="text-red-700">Testimonials</li>
-          <li>Features</li>
-        </ul>
-        <ul>
-          <li className="text-red-600">Episodes</li>
-          <li>Pricing</li>
-          <li>Blog</li>
-        </ul>
-        <div className="footer-right">
-          <p>Listen to episodes on your favorite platform:</p>
-          <SocialLogos />
-          <p>App available on</p>
-          <Platforms />
-        </div>
+        <hr className="bottom" />
       </div>
-      <div className="bottom"></div>
     </footer>
   );
 }

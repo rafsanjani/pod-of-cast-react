@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./RecentEpisodes.scss";
 import episode1 from "../../images/cover/episode-1.png";
 import { Link } from "react-router-dom";
 import { Podcast } from "../../model/Podcast";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { getPodcastEpisodes } from "../../api/PodcastService";
+import { setPodcast } from "./recent-episodes-slice";
 
 type RecentEpisodeProp = {
   episodes: Podcast[];
@@ -49,18 +51,16 @@ function EpisodeList(prop: RecentEpisodeProp) {
 }
 
 export const RecentEpisodes = React.forwardRef<HTMLElement>((prop, ref) => {
-  let initial: Podcast[] = [];
-  const [episodes, setEpisodes] = useState(initial);
-
-  const getEpisodes = async () => {
-    const data = await getPodcastEpisodes();
-    setEpisodes(data);
-  };
+  const podcasts = useAppSelector((state) => state.podcast.value);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    getEpisodes().then(() => {
-      console.log("Successfully loaded episodes");
-    });
+    async function fetchPodcasts() {
+      const podcasts = await getPodcastEpisodes();
+      dispatch(setPodcast(podcasts));
+    }
+
+    fetchPodcasts().then(() => console.log("Successfully loaded podcasts"));
   }, []);
 
   return (
@@ -69,7 +69,7 @@ export const RecentEpisodes = React.forwardRef<HTMLElement>((prop, ref) => {
         Recent Episodes
       </h1>
       <h3>Available on your favorite platform</h3>
-      <EpisodeList episodes={episodes} />
+      <EpisodeList episodes={podcasts} />
       <button className="button tracking-tightest">BROWSE ALL EPISODES</button>
     </section>
   );

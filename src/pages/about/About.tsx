@@ -48,12 +48,6 @@ function handleClick(e: React.MouseEvent) {
 }
 
 function GetInTouch() {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [phone, setPhone] = useState("");
-
   return (
     <Fragment>
       <div className="contact-us">
@@ -62,79 +56,89 @@ function GetInTouch() {
         <p>Send your message to us</p>
       </div>
       <hr />
-      <form>
-        <div className="input-field">
-          <label htmlFor="fullName">
-            Full name <span>*</span>
-          </label>
-          <input
-            type="text"
-            id="fullName"
-            name="fullName"
-            onInput={(e) => setFullName(e.currentTarget.value)}
-          />
-        </div>
-        <div className="input-field">
-          <label htmlFor="email">
-            Email <span>*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            onInput={(e) => setEmail(e.currentTarget.value)}
-          />
-        </div>
-        <div className="input-field">
-          <label htmlFor="phone">
-            Phone <span>*</span>
-          </label>
-          <input
-            type="text"
-            id="phone"
-            name="phone"
-            onInput={(e) => setPhone(e.currentTarget.value)}
-          />
-        </div>
-        <div className="input-field">
-          <label htmlFor="subject">
-            Subject <span>*</span>
-          </label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            onInput={(e) => setSubject(e.currentTarget.value)}
-          />
-        </div>
-        <div className="input-field message-area">
-          <label htmlFor="subject">
-            Message <span>*</span>
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            onInput={(e) => setMessage(e.currentTarget.value)}
-          />
-        </div>
-        <div className="form-footer">
-          <p>
-            <span>*</span> Required
-          </p>
-          <button
-            className="button"
-            onClick={(e) => {
-              e.preventDefault();
-              console.log(
-                `${fullName} ${subject} ${phone} ${email} ${message}`
-              );
-            }}
-          >
-            Send Message
-          </button>
-          <p>Viverra at port accumsan. Orci non</p>
-        </div>
-      </form>
+      <ContactUsForm />
     </Fragment>
+  );
+}
+
+function ContactUsForm() {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
+
+  return (
+    <form>
+      <div className="input-field">
+        <label htmlFor="fullName">
+          Full name <span>*</span>
+        </label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          onInput={(e) => setFullName(e.currentTarget.value)}
+        />
+      </div>
+      <div className="input-field">
+        <label htmlFor="email">
+          Email <span>*</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          onInput={(e) => setEmail(e.currentTarget.value)}
+        />
+      </div>
+      <div className="input-field">
+        <label htmlFor="phone">
+          Phone <span>*</span>
+        </label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          onInput={(e) => setPhone(e.currentTarget.value)}
+        />
+      </div>
+      <div className="input-field">
+        <label htmlFor="subject">
+          Subject <span>*</span>
+        </label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          onInput={(e) => setSubject(e.currentTarget.value)}
+        />
+      </div>
+      <div className="input-field message-area">
+        <label htmlFor="subject">
+          Message <span>*</span>
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          onInput={(e) => setMessage(e.currentTarget.value)}
+        />
+      </div>
+      <div className="form-footer">
+        <p>
+          <span>*</span> Required
+        </p>
+        <button
+          className="button"
+          onClick={(e) => {
+            e.preventDefault();
+            console.log(`${fullName} ${subject} ${phone} ${email} ${message}`);
+          }}
+        >
+          Send Message
+        </button>
+        <p>Viverra at port accumsan. Orci non</p>
+      </div>
+    </form>
   );
 }

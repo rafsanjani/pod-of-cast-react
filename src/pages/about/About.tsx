@@ -29,7 +29,7 @@ function AboutGrid() {
     <div className="about-grid">
       {count.map((count) => {
         return (
-          <div className="card">
+          <div className="card" key={count}>
             <h2>
               {count}
               <span>K</span>

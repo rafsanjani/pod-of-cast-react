@@ -18,12 +18,12 @@ type BenefitsProp = {
 };
 
 function BenefitsGrid(props: BenefitsProp) {
-  const benefitsGridItems = props.benefits.map((prop) => {
+  const benefitsGridItems = props.benefits.map((benefit) => {
     return (
-      <div className="benefits-card">
-        <img src={prop.image} alt="" />
-        <h3 className="font-bold">{prop.title}</h3>
-        <p>{prop.text}</p>
+      <div className="benefits-card" key={benefit.title}>
+        <img src={benefit.image} alt="" />
+        <h3 className="font-bold">{benefit.title}</h3>
+        <p>{benefit.text}</p>
       </div>
     );
   });

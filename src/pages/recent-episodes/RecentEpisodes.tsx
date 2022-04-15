@@ -71,7 +71,7 @@ const episodes: Episode[] = [
 function EpisodeList(prop: RecentEpisodeProp) {
   const episodes = prop.episodes.map((episode) => {
     return (
-      <div className="recent-episodes-card">
+      <div className="recent-episodes-card" key={episode.title}>
         <div className="top">
           <img className="image" src={episode.image} alt="episode image" />
           <div className="description">
@@ -84,7 +84,11 @@ function EpisodeList(prop: RecentEpisodeProp) {
         <div className="card-footer">
           <ul className="tags">
             {episode.tags.map((tag) => {
-              return <li className="footer-content">{tag}</li>;
+              return (
+                <li className="footer-content" key={tag}>
+                  {tag}
+                </li>
+              );
             })}
           </ul>
           <div className="hosts font-bold">

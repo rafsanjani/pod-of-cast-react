@@ -33,7 +33,7 @@ export function Testimonials(props: TestimonialProps) {
 
   const testimonialList = props.props.map((testimonial) => {
     return (
-      <div className="testimonial-card">
+      <div className="testimonial-card" key={testimonial.name}>
         <h1 className="font-bold">“</h1>
         <p>{testimonial.text}</p>
         <div className="contact">

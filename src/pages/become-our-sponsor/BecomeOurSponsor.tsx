@@ -3,7 +3,7 @@ import "./BecomeOurSponsor.css";
 type Membership = {
   price: number;
   category: string;
-  description: String;
+  description: string;
   tier: number;
   perks: string[];
 };
@@ -66,6 +66,7 @@ export function BecomeOurSponsor() {
               className={
                 membership.tier === 2 ? "pricing-card family" : "pricing-card"
               }
+              key={membership.category}
             >
               <h1 className="font-bold text-2xl lg:text-4xl">
                 {membership.category}
@@ -93,6 +94,7 @@ export function BecomeOurSponsor() {
                   ? "whats-included family"
                   : "whats-included"
               }
+              key={membership.category}
             >
               <h3 className="font-bold text-2xl">Whats included</h3>
               <ul>
@@ -102,6 +104,7 @@ export function BecomeOurSponsor() {
                       className={
                         index === 0 && membership.tier > 1 ? "font-bold" : ""
                       }
+                      key={perk}
                     >
                       {perk}
                     </li>

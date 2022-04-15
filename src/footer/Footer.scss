@@ -1,85 +1,95 @@
 footer {
-    background: #fff;
-    width: 100vw;
-}
+  background: #fff;
+  width: 100vw;
 
-footer .wrapper {
+  .wrapper {
     width: 90%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
     padding: 50px;
-}
+  }
 
-footer .top {
+  .top {
     display: grid;
     padding: 10px;
     grid-template: 1fr / 2fr 1fr 1fr 2fr;
-}
+  }
 
-footer .about-grid {
+  .about-grid {
     margin: 50px 0;
     border: 0.5px solid #4D4D4D;
-}
+  }
 
-footer p {
+  p {
     text-align: start;
     font-size: 14px;
-}
+  }
 
 
-footer ul {
+  ul {
     display: flex;
     flex-direction: column;
     align-items: start;
     font-size: 14px;
     gap: 30px;
     justify-content: start;
-}
+  }
 
-footer .footer-left img {
+  .footer-left img {
     height: 24px;
     width: 24px;
-}
+  }
 
-footer .social-logos {
+  .social-logos {
     display: flex;
     margin-bottom: 30px;
     flex-direction: row;
-}
+  }
 
-footer .platforms {
+  .platforms {
     display: flex;
     border: none;
     width: 100%;
     justify-content: start;
     padding: 0;
     margin: 0;
-}
+  }
 
-footer .footer-left {
+  .footer-left {
     display: flex;
     flex-direction: column;
     align-items: start;
     margin-right: 30px;
     justify-content: start;
     gap: 20px;
-}
+  }
 
-footer .footer-left .logo {
+  .footer-left .logo {
     height: 74px;
     width: 74px;
-}
+  }
 
-footer .footer-left .socials {
+  .footer-left .socials {
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: start;
     gap: 10px;
-}
+  }
 
-footer .footer-right {
+  .footer-right {
     gap: 20px;
     display: flex;
     flex-direction: column;
     align-items: start;
+  }
+
+  hr {
+    border: 0.5px solid #4D4D4D;
+    width: 100%;
+    margin: 50px 0;
+    align-self: center;
+    justify-self: center;
+  }
 }

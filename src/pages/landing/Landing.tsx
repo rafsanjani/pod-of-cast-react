@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Landing.css";
 import hero_shape_swirl from "../../images/hero-shape-swirl.svg";
 import stars from "../../images/stars.svg";
@@ -10,8 +10,27 @@ import women_rights from "../../images/cover/women-rights.png";
 import google from "../../images/platforms/google-podcast.svg";
 import spotify from "../../images/platforms/spotify.svg";
 import youtube from "../../images/platforms/youtube.svg";
+import { Benefits } from "../benefits/Benefits";
+import { RecentEpisodes } from "../recent-episodes/RecentEpisodes";
+import { BecomeOurSponsor } from "../become-our-sponsor/BecomeOurSponsor";
+import { Footer } from "../../footer/Footer";
+import { useLocation } from "react-router-dom";
+import { Testimonials } from "../testimonial/Testimonial";
 
 export function Landing() {
+  const recentEpisodesRef = useRef<HTMLElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (recentEpisodesRef && location.hash.includes("#recent-episodes")) {
+      recentEpisodesRef?.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "center",
+      });
+    }
+  });
+
   return (
     <section className="landing">
       <LandingHero
@@ -23,6 +42,11 @@ export function Landing() {
       </LandingHero>
       <ImageList />
       <SocialLogos />
+      <Benefits />
+      <RecentEpisodes ref={recentEpisodesRef} />
+      <Testimonials />
+      <BecomeOurSponsor />
+      <Footer />
     </section>
   );
 }

@@ -2,6 +2,7 @@ import "./About.scss";
 import React, { Fragment, useState } from "react";
 import { LandingHero } from "../landing/Landing";
 import ic_topic from "../../images/ic-topic.svg";
+import { Footer } from "../../footer/Footer";
 
 export function About() {
   return (
@@ -18,6 +19,7 @@ export function About() {
       </LandingHero>
       <AboutGrid />
       <GetInTouch />
+      <Footer />
     </section>
   );
 }

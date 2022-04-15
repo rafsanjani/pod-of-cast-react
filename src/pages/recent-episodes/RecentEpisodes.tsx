@@ -105,9 +105,9 @@ function EpisodeList(prop: RecentEpisodeProp) {
   return <div className="recent-episodes-grid">{episodes}</div>;
 }
 
-export function RecentEpisodes() {
+export const RecentEpisodes = React.forwardRef<HTMLElement>((prop, ref) => {
   return (
-    <section className="recent-episodes" id="recent-episodes">
+    <section className="recent-episodes" ref={ref}>
       <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">
         Recent Episodes
       </h1>
@@ -116,4 +116,4 @@ export function RecentEpisodes() {
       <button className="button tracking-tightest">BROWSE ALL EPISODES</button>
     </section>
   );
-}
+});

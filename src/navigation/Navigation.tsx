@@ -1,18 +1,29 @@
 import React from "react";
 import logo from "../images/logo.svg";
 import "./Navigation.css";
+import { Link } from "react-router-dom";
 
 export function Navigation() {
   return (
     <header>
-      <img className="logo" src={logo} alt="logo" />
+      <Link to="/">
+        <img className="logo" src={logo} alt="logo" />
+      </Link>
       <nav>
         <ul>
           <li>
-            <a href="#recent-episodes">Episodes</a>
+            {/*<a href="#recent-episodes">Episodes</a>*/}
+            <Link
+              to={{
+                pathname: "/",
+                hash: "#recent-episodes",
+              }}
+            >
+              Episodes
+            </Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="about">About</Link>
           </li>
           <li>
             <a href="#">More</a>

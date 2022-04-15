@@ -3,6 +3,12 @@ import "./Testimonial.css";
 import sparkles from "../../images/sparkles.svg";
 import arrowLeft from "../../images/arrow-left-circle.svg";
 import arrowRight from "../../images/arrow-right-circle.svg";
+import spotify from "../../images/platforms/spotify.svg";
+import avatar_1 from "../../images/avatar/avatar-1.png";
+import googlePodcast from "../../images/platforms/google-podcast.svg";
+import avatar_2 from "../../images/avatar/avatar-2.png";
+import applePodcast from "../../images/platforms/apple-podcast.svg";
+import avatar_3 from "../../images/avatar/avatar-3.png";
 
 export type Testimonial = {
   avatar: string;
@@ -10,8 +16,41 @@ export type Testimonial = {
   name: string;
   text: string;
 };
+const hello = () => {
+  return "";
+};
+const testimonials = () => {
+  let testimonials: Testimonial[] = [
+    {
+      name: "Luna LoveGood",
+      platform: spotify,
+      avatar: avatar_1,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    },
+    {
+      name: "Emily Blunt",
+      platform: googlePodcast,
+      avatar: avatar_2,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    },
+    {
+      name: "Mia Winters",
+      platform: applePodcast,
+      avatar: avatar_3,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    },
+    {
+      name: "Wanheda Brown",
+      platform: googlePodcast,
+      avatar: avatar_3,
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    },
+  ];
 
-export function Testimonials(props: TestimonialProps) {
+  return testimonials;
+};
+
+export function Testimonials() {
   const listRef = useRef<HTMLDivElement>(null);
   let cardWidth = 570;
 
@@ -31,7 +70,7 @@ export function Testimonials(props: TestimonialProps) {
     });
   };
 
-  const testimonialList = props.props.map((testimonial) => {
+  const testimonialList = testimonials().map((testimonial) => {
     return (
       <div className="testimonial-card" key={testimonial.name}>
         <h1 className="font-bold">“</h1>
@@ -68,7 +107,3 @@ export function Testimonials(props: TestimonialProps) {
     </section>
   );
 }
-
-type TestimonialProps = {
-  props: Testimonial[];
-};

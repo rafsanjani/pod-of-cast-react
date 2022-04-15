@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import "./Footer.css";
+import "./Footer.scss";
 import logo from "../images/logo.svg";
 import twitter from "../images/socials/twitter.svg";
 import tiktok from "../images/socials/tiktok.svg";
@@ -50,7 +50,7 @@ export function Footer() {
             <Platforms />
           </div>
         </div>
-        <hr className="about-grid" />
+        <hr />
       </div>
     </footer>
   );

@@ -1,91 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./RecentEpisodes.scss";
 import episode1 from "../../images/cover/episode-1.png";
-import episode2 from "../../images/cover/episode-2.png";
-import episode3 from "../../images/cover/episode-3.png";
-import episode4 from "../../images/cover/episode-4.png";
-import episode5 from "../../images/cover/episode-5.png";
-import episode6 from "../../images/cover/episode-6.png";
 import { Link } from "react-router-dom";
+import { Podcast } from "../../model/Podcast";
+import { getPodcastEpisodes } from "../../api/PodcastService";
 
-export type Episode = {
-  description: string;
-  image: string;
-  title: string;
-  number: number;
-  tags: string[];
-};
 type RecentEpisodeProp = {
-  episodes: Episode[];
+  episodes: Podcast[];
 };
-const episodes: Episode[] = [
-  {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    image: episode1,
-    title: "Pandemic Becoming Endemic",
-    number: 1,
-    tags: ["covid-19", "health"],
-  },
-  {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    image: episode2,
-    title: "Tesla Autopilot Controversy",
-    number: 2,
-    tags: ["automation", "tech"],
-  },
-  {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    image: episode3,
-    title: "Women's Rights? Is it alright?",
-    number: 3,
-    tags: ["women's rights"],
-  },
-  {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    image: episode4,
-    title: "How to Deal with Self–Confidence",
-    number: 4,
-    tags: ["self-esteem", "health"],
-  },
-  {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    image: episode5,
-    title: "Type of Social Classes of People",
-    number: 5,
-    tags: ["social class", "health"],
-  },
-  {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    image: episode6,
-    title: "Are you a Perplexed Mind Person?",
-    number: 6,
-    tags: ["mind-behaviour", "health"],
-  },
-];
 
 function EpisodeList(prop: RecentEpisodeProp) {
-  const episodes = prop.episodes.map((episode) => {
+  const episodeListElements = prop.episodes.map((podcast) => {
     return (
-      <Link to={episode.number.toString()}>
-        <div className="recent-episodes-card" key={episode.title}>
+      <Link to={`podcast/episode/${podcast.episode}`} key={podcast.title}>
+        <div className="recent-episodes-card">
           <div className="top">
-            <img className="image" src={episode.image} alt="episode image" />
+            <img className="image" src={podcast.cover} alt="episode" />
             <div className="description">
-              <h4>Eps. {episode.number}</h4>
-              <h3>{episode.title}</h3>
+              <h4>Eps. {podcast.episode}</h4>
+              <h3>{podcast.title}</h3>
               <hr />
-              <p>{episode.description}</p>
+              <p>{podcast.description}</p>
             </div>
           </div>
           <div className="card-footer">
             <ul className="tags">
-              {episode.tags.map((tag) => {
+              {podcast.tags.map((tag) => {
                 return (
                   <li className="footer-content" key={tag}>
                     {tag}
@@ -105,10 +45,24 @@ function EpisodeList(prop: RecentEpisodeProp) {
     );
   });
 
-  return <div className="recent-episodes-grid">{episodes}</div>;
+  return <div className="recent-episodes-grid">{episodeListElements}</div>;
 }
 
 export const RecentEpisodes = React.forwardRef<HTMLElement>((prop, ref) => {
+  let initial: Podcast[] = [];
+  const [episodes, setEpisodes] = useState(initial);
+
+  const getEpisodes = async () => {
+    const data = await getPodcastEpisodes();
+    setEpisodes(data);
+  };
+
+  useEffect(() => {
+    getEpisodes().then(() => {
+      console.log("Successfully loaded episodes");
+    });
+  }, []);
+
   return (
     <section className="recent-episodes" ref={ref}>
       <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">

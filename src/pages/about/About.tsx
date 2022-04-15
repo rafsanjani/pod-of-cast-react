@@ -1,6 +1,7 @@
 import "./About.scss";
-import React from "react";
+import React, { Fragment, useState } from "react";
 import { LandingHero } from "../landing/Landing";
+import ic_topic from "../../images/ic-topic.svg";
 
 export function About() {
   return (
@@ -15,26 +16,125 @@ export function About() {
           <button className="button">SUBSCRIBE</button>
         </div>
       </LandingHero>
-      <div className="bottom">
-        <div>
-          <h2>
-            76<span>K</span>
-          </h2>
-          <p>Community members</p>
-        </div>
-        <div>
-          <h2>
-            76<span>K</span>
-          </h2>
-          <p>Community members</p>
-        </div>
-        <div>
-          <h2>
-            76<span>K</span>
-          </h2>
-          <p>Community members</p>
-        </div>
-      </div>
+      <AboutGrid />
+      <GetInTouch />
     </section>
+  );
+}
+
+function AboutGrid() {
+  const count = [76, 128, 59];
+
+  return (
+    <div className="about-grid">
+      {count.map((count) => {
+        return (
+          <div className="card">
+            <h2>
+              {count}
+              <span>K</span>
+            </h2>
+            <p>Community members</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function handleClick(e: React.MouseEvent) {
+  e.preventDefault();
+  console.log(`(${e.clientX}, ${e.clientY})`);
+}
+
+function GetInTouch() {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
+
+  return (
+    <Fragment>
+      <div className="contact-us">
+        <h3 className="header">Get in touch</h3>
+        <img className="header" src={ic_topic} alt="" />
+        <p>Send your message to us</p>
+      </div>
+      <hr />
+      <form>
+        <div className="input-field">
+          <label htmlFor="fullName">
+            Full name <span>*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            onInput={(e) => setFullName(e.currentTarget.value)}
+          />
+        </div>
+        <div className="input-field">
+          <label htmlFor="email">
+            Email <span>*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            onInput={(e) => setEmail(e.currentTarget.value)}
+          />
+        </div>
+        <div className="input-field">
+          <label htmlFor="phone">
+            Phone <span>*</span>
+          </label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            onInput={(e) => setPhone(e.currentTarget.value)}
+          />
+        </div>
+        <div className="input-field">
+          <label htmlFor="subject">
+            Subject <span>*</span>
+          </label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            onInput={(e) => setSubject(e.currentTarget.value)}
+          />
+        </div>
+        <div className="input-field message-area">
+          <label htmlFor="subject">
+            Message <span>*</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            onInput={(e) => setMessage(e.currentTarget.value)}
+          />
+        </div>
+        <div className="form-footer">
+          <p>
+            <span>*</span> Required
+          </p>
+          <button
+            className="button"
+            onClick={(e) => {
+              e.preventDefault();
+              console.log(
+                `${fullName} ${subject} ${phone} ${email} ${message}`
+              );
+            }}
+          >
+            Send Message
+          </button>
+          <p>Viverra at port accumsan. Orci non</p>
+        </div>
+      </form>
+    </Fragment>
   );
 }

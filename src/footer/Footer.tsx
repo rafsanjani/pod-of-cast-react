@@ -50,7 +50,7 @@ export function Footer() {
             <Platforms />
           </div>
         </div>
-        <hr className="bottom" />
+        <hr className="about-grid" />
       </div>
     </footer>
   );

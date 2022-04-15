@@ -15,9 +15,9 @@ footer .top {
     grid-template: 1fr / 2fr 1fr 1fr 2fr;
 }
 
-footer .bottom {
+footer .about-grid {
     margin: 50px 0;
-    border: 1px solid #4D4D4D;
+    border: 0.5px solid #4D4D4D;
 }
 
 footer p {

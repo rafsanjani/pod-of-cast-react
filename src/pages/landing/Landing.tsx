@@ -85,13 +85,13 @@ function SocialLogos() {
       <h1 className="font-bold tracking-tightest">Supported by</h1>
       <ul className="social-logos">
         <li>
-          <img src={google} alt="Google" />
+          <img src={google} alt="Google" key="Google" />
         </li>
         <li>
-          <img src={spotify} alt="Google" />
+          <img src={spotify} alt="Spotify" key="Spotify" />
         </li>
         <li>
-          <img src={youtube} alt="Google" />
+          <img src={youtube} alt="Youtube" key="Youtuge" />
         </li>
       </ul>
     </div>

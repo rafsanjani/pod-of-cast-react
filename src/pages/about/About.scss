@@ -3,7 +3,6 @@
 .about {
   $boxShadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
 
-  height: 100vh;
   background: $backgroundColor;
   align-items: center;
   display: flex;
@@ -13,6 +12,17 @@
     gap: 10px;
     font-size: 14px;
     width: 350px;
+  }
+
+  h2 {
+    font-size: 60px;
+    letter-spacing: -2px;
+    font-weight: bold;
+    color: $vermillion;
+
+    span {
+      color: black;
+    }
   }
 
   .outline-button {
@@ -26,26 +36,144 @@
     box-shadow: $boxShadow;
   }
 
-  .bottom {
+  .about-grid {
     width: 90%;
-    margin-top: 50px;
+    padding: 50px;
     display: grid;
     grid-gap: 15px;
     grid-template: 1fr/ repeat(3, 1fr);
 
-    div {
+    .card {
       aspect-ratio: 1.5;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      box-shadow: 6px 6px 0 #CD4631;
+      box-shadow: 6px 6px 0 $vermillion;
       border: 1px solid #000;
       border-radius: 8px;
+    }
+  }
 
-      span {
-        color: black;
+  .contact-us {
+    display: grid;
+    justify-items: center;
+
+    h3 {
+      font-size: 60px;
+      font-weight: bold;
+    }
+
+    .header {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+
+    img {
+      justify-self: end;
+      margin-right: -30px;
+    }
+
+    p {
+      font-size: 23px;
+    }
+  }
+
+  hr {
+    border: 0.5px solid #4D4D4D;
+    width: 80%;
+    margin: 50px 0;
+  }
+
+  form {
+    display: grid;
+    grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 60%;
+
+    span {
+      color: $vermillion;
+    }
+
+    div {
+      width: 100%;
+      aspect-ratio: 3.5;
+    }
+
+    .input-field {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    input {
+      height: 64px;
+      width: 100%;
+      padding: 10px;
+      border: 1.5px solid #000;
+      box-sizing: border-box;
+      transition: all 0.3s ease 0s;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input:focus-within {
+      outline: none !important;
+      border: 1.5px solid $vermillion;
+    }
+
+    .message-area {
+      grid-column: span 2;
+      grid-row: span 2;
+
+      textarea {
+        width: 100%;
+        height: 100%;
+        border: 1.5px solid #000;
+        box-sizing: border-box;
+        transition: all 0.3s ease 0s;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+
+    .form-footer {
+      grid-column: span 2;
+      display: flex;
+      justify-content: space-around;
+      font-size: 14px;
+      width: 100%;
+
+      p {
+        flex: 1;
+      }
+
+      p:nth-child(1) {
+        text-align: start;
+      }
+
+      p:nth-child(3) {
+        text-align: end;
+      }
+
+      button {
+        width: 193px;
+        height: 62px;
+        text-transform: uppercase;
+        justify-self: center;
       }
     }
   }
+}
+
+@media screen and (max-width: 1024px) {
+
 }

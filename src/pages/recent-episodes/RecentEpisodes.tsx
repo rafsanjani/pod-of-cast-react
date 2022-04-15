@@ -1,11 +1,12 @@
 import React from "react";
-import "./RecentEpisodes.css";
+import "./RecentEpisodes.scss";
 import episode1 from "../../images/cover/episode-1.png";
 import episode2 from "../../images/cover/episode-2.png";
 import episode3 from "../../images/cover/episode-3.png";
 import episode4 from "../../images/cover/episode-4.png";
 import episode5 from "../../images/cover/episode-5.png";
 import episode6 from "../../images/cover/episode-6.png";
+import { Link } from "react-router-dom";
 
 export type Episode = {
   description: string;
@@ -71,34 +72,36 @@ const episodes: Episode[] = [
 function EpisodeList(prop: RecentEpisodeProp) {
   const episodes = prop.episodes.map((episode) => {
     return (
-      <div className="recent-episodes-card" key={episode.title}>
-        <div className="top">
-          <img className="image" src={episode.image} alt="episode image" />
-          <div className="description">
-            <h4>Eps. {episode.number}</h4>
-            <h3>{episode.title}</h3>
-            <hr />
-            <p>{episode.description}</p>
+      <Link to={episode.number.toString()}>
+        <div className="recent-episodes-card" key={episode.title}>
+          <div className="top">
+            <img className="image" src={episode.image} alt="episode image" />
+            <div className="description">
+              <h4>Eps. {episode.number}</h4>
+              <h3>{episode.title}</h3>
+              <hr />
+              <p>{episode.description}</p>
+            </div>
+          </div>
+          <div className="card-footer">
+            <ul className="tags">
+              {episode.tags.map((tag) => {
+                return (
+                  <li className="footer-content" key={tag}>
+                    {tag}
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="hosts font-bold">
+              <p>Hosted By:</p>
+              <img className="footer-image" src={episode1} alt="" />
+              <img className="footer-image" src={episode1} alt="" />
+              <img className="footer-image" src={episode1} alt="" />
+            </div>
           </div>
         </div>
-        <div className="card-footer">
-          <ul className="tags">
-            {episode.tags.map((tag) => {
-              return (
-                <li className="footer-content" key={tag}>
-                  {tag}
-                </li>
-              );
-            })}
-          </ul>
-          <div className="hosts font-bold">
-            <p>Hosted By:</p>
-            <img className="footer-image" src={episode1} alt="" />
-            <img className="footer-image" src={episode1} alt="" />
-            <img className="footer-image" src={episode1} alt="" />
-          </div>
-        </div>
-      </div>
+      </Link>
     );
   });
 

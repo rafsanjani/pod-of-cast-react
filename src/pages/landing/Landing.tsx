@@ -3,10 +3,10 @@ import "./Landing.css";
 import hero_shape_swirl from "../../images/hero-shape-swirl.svg";
 import stars from "../../images/stars.svg";
 import perplexed from "../../images/cover/perplexed-mind.png";
-import self_confidence from "../../images/cover/self-confidence.png";
-import social_class from "../../images/cover/social-class.png";
-import tesla_autopilot from "../../images/cover/tesla-autopilot.png";
-import women_rights from "../../images/cover/women-rights.png";
+import selfConfidence from "../../images/cover/self-confidence.png";
+import socialClass from "../../images/cover/social-class.png";
+import teslaAutopilot from "../../images/cover/tesla-autopilot.png";
+import womensRights from "../../images/cover/women-rights.png";
 import google from "../../images/platforms/google-podcast.svg";
 import spotify from "../../images/platforms/spotify.svg";
 import youtube from "../../images/platforms/youtube.svg";
@@ -79,10 +79,10 @@ export function LandingHero(props: LandingHeroProps) {
 function ImageList() {
   const urls: string[] = [
     perplexed,
-    self_confidence,
-    social_class,
-    tesla_autopilot,
-    women_rights,
+    selfConfidence,
+    socialClass,
+    teslaAutopilot,
+    womensRights,
   ];
   const imageItems = urls.map((image) => {
     return (

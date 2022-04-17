@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import "./RecentEpisodes.scss";
-import episode1 from "../../images/cover/episode-1.png";
 import { Link } from "react-router-dom";
 import { Podcast } from "../../model/Podcast";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { setPodcast } from "./recent-episodes-slice";
+import janeDoe from "../../images/avatar/jane-doe.png";
+import avatar1 from "../../images/avatar/avatar-1.png";
+import avatar2 from "../../images/avatar/avatar-2.png";
 
 type RecentEpisodeProp = {
   episodes: Podcast[];
@@ -36,9 +38,9 @@ function EpisodeList(prop: RecentEpisodeProp) {
             </ul>
             <div className="hosts font-bold">
               <p>Hosted By:</p>
-              <img className="footer-image" src={episode1} alt="" />
-              <img className="footer-image" src={episode1} alt="" />
-              <img className="footer-image" src={episode1} alt="" />
+              <img className="footer-image" src={janeDoe} alt="" />
+              <img className="footer-image" src={avatar1} alt="" />
+              <img className="footer-image" src={avatar2} alt="" />
             </div>
           </div>
         </div>

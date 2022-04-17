@@ -1,5 +1,6 @@
 header {
     height: 70px;
+    padding-top: 30px;
     display: flex;
     width: 90%;
     margin: auto;
@@ -21,12 +22,6 @@ header {
     text-transform: uppercase;
     font-weight: bold;
     padding: 8px 20px;
-}
-
-.outline-button {
-    border-radius: 8px;
-    border: 2px solid black;
-    transition: all 0.3s ease 0s
 }
 
 .outline-button:hover {

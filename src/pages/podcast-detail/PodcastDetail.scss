@@ -1,0 +1,128 @@
+@import "../../app/theme";
+
+.podcast-detail {
+  padding: 30px;
+  min-height: 100vh;
+
+  .top {
+    display: grid;
+    background: $backgroundColor;
+    height: 60%;
+    padding-top: 30px;
+    width: 100%;
+    grid-gap: 30px;
+
+    grid-template-columns: 1fr 1fr;
+
+    img {
+      height: 472px;
+      width: 472px;
+      box-shadow: 12px 12px 0 #81ADC8;
+      border-radius: 8px
+    }
+
+    .left {
+      margin-left: 50px;
+      display: flex;
+    }
+
+    .right {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      margin-right: 50px;
+
+      h3 {
+        font-weight: bold;
+        font-size: 16px;
+        color: $vermillion;
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 36px;
+        text-align: start;
+        letter-spacing: -0.02em;
+      }
+
+      hr {
+        border: 1px solid black;
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      p {
+        color: $davysGrey;
+        font-size: 16px;
+        text-align: start;
+      }
+
+
+      .host {
+        display: flex;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .hosted-by {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          gap: 10px;
+        }
+
+        .host-name {
+          font-size: 14px;
+          font-weight: bold;
+          color: $vermillion;
+        }
+
+        img {
+          border-radius: 50%;
+          height: 36px;
+          width: 36px;
+          box-shadow: none;
+        }
+      }
+
+      .bottom-buttons {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+
+        button {
+          height: 62px;
+          box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
+          font-weight: bold;
+        }
+
+        .button {
+          width: 160px;
+        }
+      }
+
+      .listen-now {
+        border-radius: 8px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: row;
+        padding: 0 30px;
+        gap: 10px;
+        align-items: center;
+        transition: all 0.3s ease 0s;
+
+        img {
+          width: 14px;
+          height: 14px;
+          box-shadow: none;
+        }
+
+        span {
+          color: $vermillion;
+        }
+      }
+    }
+  }
+}

@@ -1,18 +1,26 @@
-import episode1 from "../images/cover/episode-1.png";
-import episode2 from "../images/cover/episode-2.png";
-import episode3 from "../images/cover/episode-3.png";
-import episode4 from "../images/cover/episode-4.png";
-import episode5 from "../images/cover/episode-5.png";
-import episode6 from "../images/cover/episode-6.png";
+import covid19 from "../images/cover/covid-19.png";
+import teslaAutopilot from "../images/cover/tesla-autopilot.png";
+import womensRights from "../images/cover/women-rights.png";
+import selfConfidence from "../images/cover/self-confidence.png";
+import socialClass from "../images/cover/social-class.png";
+import perplexedMind from "../images/cover/perplexed-mind.png";
+import janeDoe from "../images/avatar/jane-doe.png";
+import avatar1 from "../images/avatar/avatar-1.png";
+import avatar2 from "../images/avatar/avatar-2.png";
+import avatar3 from "../images/avatar/avatar-3.png";
 import { Podcast } from "../model/Podcast";
 
 const episodes: Podcast[] = [
   {
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    cover: episode1,
+    cover: covid19,
     title: "Pandemic Becoming Endemic",
     episode: 1,
+    host: {
+      name: "Jane doe",
+      avatar: avatar1,
+    },
     tags: ["covid-19", "health"],
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -20,7 +28,11 @@ const episodes: Podcast[] = [
   {
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    cover: episode2,
+    cover: teslaAutopilot,
+    host: {
+      name: "Jane doe",
+      avatar: avatar2,
+    },
     title: "Tesla Autopilot Controversy",
     episode: 2,
     content:
@@ -30,7 +42,11 @@ const episodes: Podcast[] = [
   {
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    cover: episode3,
+    cover: womensRights,
+    host: {
+      name: "Jane doe",
+      avatar: avatar3,
+    },
     title: "Women's Rights? Is it alright?",
     episode: 3,
     tags: ["women's rights"],
@@ -40,9 +56,13 @@ const episodes: Podcast[] = [
   {
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    cover: episode4,
+    cover: selfConfidence,
     title: "How to Deal with Self–Confidence",
     episode: 4,
+    host: {
+      name: "Jane doe",
+      avatar: janeDoe,
+    },
     tags: ["self-esteem", "health"],
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -50,8 +70,12 @@ const episodes: Podcast[] = [
   {
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    cover: episode5,
+    cover: socialClass,
     title: "Type of Social Classes of People",
+    host: {
+      name: "Jane doe",
+      avatar: janeDoe,
+    },
     episode: 5,
     tags: ["social class", "health"],
     content:
@@ -60,7 +84,11 @@ const episodes: Podcast[] = [
   {
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
-    cover: episode6,
+    cover: perplexedMind,
+    host: {
+      name: "Jane doe",
+      avatar: janeDoe,
+    },
     title: "Are you a Perplexed Mind Person?",
     episode: 6,
     tags: ["mind-behaviour", "health"],

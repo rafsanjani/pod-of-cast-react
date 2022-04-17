@@ -1,8 +1,6 @@
 import React from "react";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { DevSupport } from "@react-buddy/ide-toolbox";
-import { ComponentPreviews, useInitial } from "./dev";
 import { createRoot } from "react-dom/client";
 import { App } from "./app/App";
 import { store } from "./app/store";
@@ -11,12 +9,7 @@ import { Provider } from "react-redux";
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
     <React.StrictMode>
-      <DevSupport
-        ComponentPreviews={ComponentPreviews}
-        useInitialHook={useInitial}
-      >
-        <App />
-      </DevSupport>
+      <App />
     </React.StrictMode>
   </Provider>
 );

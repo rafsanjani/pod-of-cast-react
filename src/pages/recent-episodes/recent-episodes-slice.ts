@@ -1,5 +1,6 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { Podcast } from "../../model/Podcast";
+import { getPodcastEpisodes } from "../../api/PodcastService";
 
 interface PodcastState {
   value: Podcast[];
@@ -13,8 +14,9 @@ const counterSlice = createSlice({
   name: "podcast",
   initialState,
   reducers: {
-    setPodcast(state, action: PayloadAction<Podcast[]>) {
-      state.value = action.payload;
+    setPodcast(state) {
+      state.value = getPodcastEpisodes();
+      return state;
     },
   },
 });

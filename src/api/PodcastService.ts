@@ -69,4 +69,4 @@ const episodes: Podcast[] = [
   },
 ];
 
-export const getPodcastEpisodes = async () => episodes;
+export const getPodcastEpisodes = () => episodes;

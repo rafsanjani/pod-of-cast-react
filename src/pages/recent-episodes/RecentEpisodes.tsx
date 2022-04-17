@@ -4,7 +4,6 @@ import episode1 from "../../images/cover/episode-1.png";
 import { Link } from "react-router-dom";
 import { Podcast } from "../../model/Podcast";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { getPodcastEpisodes } from "../../api/PodcastService";
 import { setPodcast } from "./recent-episodes-slice";
 
 type RecentEpisodeProp = {
@@ -51,20 +50,65 @@ function EpisodeList(prop: RecentEpisodeProp) {
 }
 
 export const RecentEpisodes = React.forwardRef<HTMLElement>((prop, ref) => {
-  const podcasts = useAppSelector((state) => state.podcast.value);
+  const podcasts: Podcast[] = useAppSelector((state) => state.podcast.value);
   const dispatch = useAppDispatch();
+  // const [numDogs, setNumDogs] = useState(10);
+
+  // const { data = [], isFetching } = useFetchBreedsQuery(numDogs);
+
+  // console.log(isFetching);
 
   useEffect(() => {
-    async function fetchPodcasts() {
-      const podcasts = await getPodcastEpisodes();
-      dispatch(setPodcast(podcasts));
+    if (podcasts.length === 0) {
+      dispatch(setPodcast());
     }
-
-    fetchPodcasts().then(() => console.log("Successfully loaded podcasts"));
   }, []);
 
   return (
     <section className="recent-episodes" ref={ref}>
+      {/*<div>*/}
+      {/*  <p>Dogs to fetch:</p>*/}
+      {/*  <select*/}
+      {/*      name=""*/}
+      {/*      id=""*/}
+      {/*      value={numDogs}*/}
+      {/*      onChange={(e) => setNumDogs(Number(e.target.value))}*/}
+      {/*  >*/}
+      {/*    <option value="5">5</option>*/}
+      {/*    <option value="10">10</option>*/}
+      {/*    <option value="15">15</option>*/}
+      {/*    <option value="20">20</option>*/}
+      {/*  </select>*/}
+      {/*</div>*/}
+      {/*<div>*/}
+      {/*  <p>Number of dogs fetched: {data.length}</p>*/}
+      {/*  <table>*/}
+      {/*    <thead>*/}
+      {/*    <tr>*/}
+      {/*      <th>Name</th>*/}
+      {/*      <th>Picture</th>*/}
+      {/*    </tr>*/}
+      {/*    </thead>*/}
+
+      {/*    <tbody>*/}
+      {/*    {data.map((breed) => {*/}
+      {/*      return (*/}
+      {/*          <tr key={breed.id}>*/}
+      {/*            <td>{breed.name}</td>*/}
+      {/*            <td>*/}
+      {/*              <img*/}
+      {/*                  src={breed.image.url}*/}
+      {/*                  height="250"*/}
+      {/*                  width="250"*/}
+      {/*                  alt=""*/}
+      {/*              />*/}
+      {/*            </td>*/}
+      {/*          </tr>*/}
+      {/*      );*/}
+      {/*    })}*/}
+      {/*    </tbody>*/}
+      {/*  </table>*/}
+      {/*</div>*/}
       <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">
         Recent Episodes
       </h1>

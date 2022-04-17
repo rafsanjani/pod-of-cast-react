@@ -49,10 +49,10 @@ footer {
     flex-direction: row;
   }
 
-  .platforms {
+  .app-stores {
     display: flex;
+    flex-direction: row;
     border: none;
-    width: 100%;
     justify-content: start;
     padding: 0;
     margin: 0;

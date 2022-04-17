@@ -47,7 +47,7 @@ export function Footer() {
             <p>Listen to episodes on your favorite platform:</p>
             <SocialLogos />
             <p>App available on</p>
-            <Platforms />
+            <AppStores />
           </div>
         </div>
         <hr />
@@ -56,9 +56,9 @@ export function Footer() {
   );
 }
 
-function Platforms() {
+function AppStores() {
   return (
-    <ul className="platforms">
+    <ul className="app-stores">
       <li>
         <img src={appStore} alt="" />
       </li>

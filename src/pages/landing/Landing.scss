@@ -91,30 +91,29 @@
   }
 
   @media only screen and (max-width: 1024px) {
-    .platforms {
-      flex-direction: column;
-      padding: 5px 0;
-    }
-
     .landing {
       width: 100%;
-    }
 
-    h1 {
-      font-size: 16px;
-    }
+      .platforms {
+        flex-direction: column;
+        padding: 5px 0;
+      }
 
-    .social-logos img {
-      width: 130px;
-      margin-top: 5px;
-      height: 25px;
-    }
+      h1 {
+        font-size: 16px;
+      }
 
-    .hero img {
-      width: 100px;
-      height: 100px;
-    }
+      .social-logos img {
+        width: 130px;
+        margin-top: 5px;
+        height: 25px;
+      }
 
+      .hero img {
+        width: 100px;
+        height: 100px;
+      }
+    }
   }
 }
 

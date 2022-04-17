@@ -1,5 +1,5 @@
 import "./About.scss";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { LandingHero } from "../landing/Landing";
 import ic_topic from "../../images/ic-topic.svg";
 import { Footer } from "../../footer/Footer";
@@ -44,14 +44,9 @@ function AboutGrid() {
   );
 }
 
-function handleClick(e: React.MouseEvent) {
-  e.preventDefault();
-  console.log(`(${e.clientX}, ${e.clientY})`);
-}
-
 function GetInTouch() {
   return (
-    <Fragment>
+    <>
       <div className="contact-us">
         <h1>Get in touch</h1>
         <img className="header" src={ic_topic} alt="" />
@@ -59,7 +54,7 @@ function GetInTouch() {
       </div>
       <hr />
       <ContactUsForm />
-    </Fragment>
+    </>
   );
 }
 

@@ -4,49 +4,9 @@
   max-height: 100vh;
   width: 100%;
 
-  .hero {
-    display: grid;
-    max-height: 70%;
-    grid-template: repeat(1, 1fr)/  1fr 2fr 1fr;
-    width: 100%;
-    align-items: center;
-    padding-bottom: 60px;
-  }
-
-  .hero img {
-    margin-bottom: 50px;
-  }
-
-  .stars {
-    justify-self: end;
-  }
-
-  .spring {
-    justify-self: start;
-    height: 300px;
-  }
-
-  .hero-content {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    p {
-      width: 50%;
-    }
-  }
-
   .hero-content h1 {
     font-weight: bold;
     line-height: 100%;
-  }
-
-  .hero-content p {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: 16px;
   }
 
   .display {

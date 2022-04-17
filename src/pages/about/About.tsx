@@ -13,8 +13,8 @@ export function About() {
         paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit,  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam–quis."
       >
         <div className="about-buttons">
-          <button className="outline-button">BECOME SPONSOR</button>
-          <button className="button">SUBSCRIBE</button>
+          <button className="button outline-button">BECOME SPONSOR</button>
+          <button className="button filled-button">SUBSCRIBE</button>
         </div>
       </LandingHero>
       <AboutGrid />

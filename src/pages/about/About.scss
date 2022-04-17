@@ -12,6 +12,7 @@
     gap: 10px;
     font-size: 14px;
     width: 350px;
+    justify-self: start;
   }
 
   h2 {
@@ -27,13 +28,6 @@
 
   .outline-button {
     width: 200px;
-    font-weight: bold;
-    box-shadow: $boxShadow;
-  }
-
-  .button {
-    font-weight: bold;
-    box-shadow: $boxShadow;
   }
 
   .about-grid {

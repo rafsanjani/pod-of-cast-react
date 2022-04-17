@@ -1,21 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "./Landing.scss";
-import hero_shape_swirl from "../../images/hero-shape-swirl.svg";
-import stars from "../../images/stars.svg";
-import perplexed from "../../images/cover/perplexed-mind.png";
-import selfConfidence from "../../images/cover/self-confidence.png";
-import socialClass from "../../images/cover/social-class.png";
-import teslaAutopilot from "../../images/cover/tesla-autopilot.png";
-import womensRights from "../../images/cover/women-rights.png";
-import google from "../../images/platforms/google-podcast.svg";
-import spotify from "../../images/platforms/spotify.svg";
-import youtube from "../../images/platforms/youtube.svg";
+import "../../images/images";
 import { Benefits } from "../benefits/Benefits";
 import { RecentEpisodes } from "../recent-episodes/RecentEpisodes";
 import { BecomeOurSponsor } from "../become-our-sponsor/BecomeOurSponsor";
 import { Footer } from "../../footer/Footer";
 import { useLocation } from "react-router-dom";
 import { Testimonials } from "../testimonial/Testimonial";
+import { Images } from "../../images/images";
 
 export function Landing() {
   const recentEpisodesRef = useRef<HTMLElement>(null);
@@ -61,7 +53,7 @@ type LandingHeroProps = {
 export function LandingHero(props: LandingHeroProps) {
   return (
     <div className="hero">
-      <img className="spring" src={hero_shape_swirl} alt="spring" />
+      <img className="spring" src={Images.heroShapeSwirl} alt="spring" />
       <div className="hero-content">
         <div className="display">
           {props.title}
@@ -71,18 +63,18 @@ export function LandingHero(props: LandingHeroProps) {
         <p>{props.paragraph}</p>
         {props.children}
       </div>
-      <img className="stars" src={stars} alt="stars" />
+      <img className="stars" src={Images.stars} alt="stars" />
     </div>
   );
 }
 
 function ImageList() {
   const urls: string[] = [
-    perplexed,
-    selfConfidence,
-    socialClass,
-    teslaAutopilot,
-    womensRights,
+    Images.perplexed,
+    Images.selfConfidence,
+    Images.socialClass,
+    Images.teslaAutoPilot,
+    Images.womenRights,
   ];
   const imageItems = urls.map((image) => {
     return (
@@ -105,13 +97,13 @@ function SocialLogos() {
       <h3 className="font-bold tracking-tightest">Supported by</h3>
       <ul className="social-logos horizontal-list">
         <li>
-          <img src={google} alt="Google" key="Google" />
+          <img src={Images.google} alt="Google" key="Google" />
         </li>
         <li>
-          <img src={spotify} alt="Spotify" key="Spotify" />
+          <img src={Images.spotify} alt="Spotify" key="Spotify" />
         </li>
         <li>
-          <img src={youtube} alt="Youtube" key="Youtuge" />
+          <img src={Images.youtube} alt="Youtube" key="Youtube" />
         </li>
       </ul>
     </div>

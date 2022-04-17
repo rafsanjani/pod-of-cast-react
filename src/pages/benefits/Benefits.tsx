@@ -23,7 +23,7 @@ function BenefitsGrid(props: BenefitsProp) {
       <div className="benefits-card" key={benefit.title}>
         <img src={benefit.image} alt="" />
         <h3 className="font-bold">{benefit.title}</h3>
-        <p>{benefit.text}</p>
+        <p className="text-body">{benefit.text}</p>
       </div>
     );
   });
@@ -68,9 +68,7 @@ export function Benefits() {
     <section className="benefits">
       <header>
         <div>
-          <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">
-            Membership benefits
-          </h1>
+          <h1>Membership benefits</h1>
           <img src={scribble} alt="" />
         </div>
         <h3>Become our sponsor and get all benefits</h3>

@@ -111,9 +111,7 @@ export const RecentEpisodes = React.forwardRef<HTMLElement>((prop, ref) => {
       {/*    </tbody>*/}
       {/*  </table>*/}
       {/*</div>*/}
-      <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">
-        Recent Episodes
-      </h1>
+      <h1>Recent Episodes</h1>
       <h3>Available on your favorite platform</h3>
       <EpisodeList episodes={podcasts} />
       <button className="button filled-button tracking-tightest">

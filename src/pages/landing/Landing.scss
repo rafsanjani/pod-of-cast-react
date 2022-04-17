@@ -32,6 +32,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    p {
+      width: 50%;
+    }
   }
 
   .hero-content h1 {
@@ -100,10 +104,6 @@
       .platforms {
         flex-direction: column;
         padding: 5px 0;
-      }
-
-      h1 {
-        font-size: 16px;
       }
 
       .social-logos img {

@@ -1,4 +1,4 @@
-import "./BecomeOurSponsor.css";
+import "./BecomeOurSponsor.scss";
 
 type Membership = {
   price: number;
@@ -55,9 +55,7 @@ const memberships: Membership[] = [
 export function BecomeOurSponsor() {
   return (
     <section className="become-our-sponsor">
-      <h1 className="font-bold lg:text-6xl md:text-4xl sm:text-4xl">
-        Become our sponsor
-      </h1>
+      <h1>Become our sponsor</h1>
       <h3 className="subtitle">Get exclusive episodes merch and more</h3>
       <div className="pricing-grid">
         {memberships.map((membership) => {

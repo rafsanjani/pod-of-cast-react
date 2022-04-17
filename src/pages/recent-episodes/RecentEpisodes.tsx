@@ -27,10 +27,10 @@ function EpisodeList(prop: RecentEpisodeProp) {
             </div>
           </div>
           <div className="card-footer">
-            <ul className="tags">
+            <ul className="tags horizontal-list">
               {podcast.tags.map((tag) => {
                 return (
-                  <li className="footer-content" key={tag}>
+                  <li className="tag" key={tag}>
                     {tag}
                   </li>
                 );
@@ -116,7 +116,9 @@ export const RecentEpisodes = React.forwardRef<HTMLElement>((prop, ref) => {
       </h1>
       <h3>Available on your favorite platform</h3>
       <EpisodeList episodes={podcasts} />
-      <button className="button tracking-tightest">BROWSE ALL EPISODES</button>
+      <button className="button filled-button tracking-tightest">
+        BROWSE ALL EPISODES
+      </button>
     </section>
   );
 });

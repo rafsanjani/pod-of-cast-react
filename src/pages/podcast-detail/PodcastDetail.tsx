@@ -51,8 +51,8 @@ function PodcastDetailContent({ podcast }: PodcastDetailProp) {
             <p>Sep 22, 2021</p>
           </div>
           <div className="bottom-buttons">
-            <button className="button">SUBSCRIBE</button>
-            <button className="listen-now">
+            <button className="button filled-button">SUBSCRIBE</button>
+            <button className="button outline-button listen-now-btn">
               <img src={playButton} alt="" />
               <p>
                 LISTEN NOW <span>(46 min)</span>

@@ -73,7 +73,9 @@ export function BecomeOurSponsor() {
               </h1>
               <p>{membership.description}</p>
               <div>
-                <button className="button subscribe-button">Subscribe</button>
+                <button className="button filled-button subscribe-button">
+                  Subscribe
+                </button>
                 <div className="tracking-tighter price">
                   <span className="font-bold lg:text-2xl text-red-800">
                     ${membership.price}

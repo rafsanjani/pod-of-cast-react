@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../images/logo.svg";
-import "./Navigation.css";
+import "./Navigation.scss";
 import { Link } from "react-router-dom";
 
 export function Navigation() {
@@ -12,7 +12,6 @@ export function Navigation() {
       <nav>
         <ul>
           <li>
-            {/*<a href="#recent-episodes">Episodes</a>*/}
             <Link
               to={{
                 pathname: "/",
@@ -32,9 +31,13 @@ export function Navigation() {
       </nav>
       <div className="top-buttons">
         <a href="#">
-          <div className="outline-button">Recent Episodes</div>
+          <button className="button outline-button recent-episodes">
+            Recent Episodes
+          </button>
         </a>
-        <button className="button subscribe-button">Subscribe</button>
+        <button className="button filled-button subscribe-button">
+          Subscribe
+        </button>
       </div>
     </header>
   );

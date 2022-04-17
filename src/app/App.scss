@@ -13,23 +13,93 @@
   .button {
     margin-left: 10px;
     width: 136px;
+    font-size: 14px;
+    font-weight: bold;
     height: 50px;
     border-radius: 8px;
-    background: $black;
     box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
     color: white;
+    text-transform: uppercase;
     transition: all 0.3s ease 0s
+  }
+
+  .filled-button {
+    background-color: $black;
   }
 
   .outline-button {
-    border-radius: 8px;
     border: 2px solid black;
-    transition: all 0.3s ease 0s
   }
 
+  .streaming-platform {
+    width: 138px;
+    height: 25px;
+    align-self: center;
+    object-fit: scale-down;
+  }
+
+  .horizontal-list {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+  }
+
+  .vertical-list {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+  }
 
   .button:hover {
     transform: translateY(-5px);
+  }
+
+  // Typography
+
+  .display {
+    font-size: 96px;
+    letter-spacing: -.075em;
+    font-weight: bold;
+    line-height: 100%;
+  }
+
+  h1 {
+    font-size: 60px;
+    letter-spacing: -2%;
+    font-weight: bold;
+    line-height: 120%;
+  }
+
+  h2 {
+    font-size: 37px;
+    letter-spacing: -2%;
+    font-weight: bold;
+    line-height: 140%;
+  }
+
+
+  h3 {
+    font-size: 23px;
+    letter-spacing: -2%;
+    line-height: 140%;
+  }
+
+  .text-body {
+    font-size: 16px;
+    line-height: 160%;
+    color: $black;
+  }
+
+  .text-caption {
+    font-size: 14px;
+    line-height: 160%;
+    color: $black;
+  }
+
+  .text-small {
+    font-size: 12px;
+    line-height: 160px;
+    color: $black;
   }
 
   @media only screen and (max-width: 1024px) {

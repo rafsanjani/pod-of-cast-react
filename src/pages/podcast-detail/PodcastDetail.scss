@@ -103,15 +103,13 @@
         }
       }
 
-      .listen-now {
-        border-radius: 8px;
-        border: 2px solid black;
+      .listen-now-btn {
         display: flex;
         flex-direction: row;
+        width: 268px !important;
         padding: 0 30px;
         gap: 10px;
         align-items: center;
-        transition: all 0.3s ease 0s;
 
         img {
           width: 14px;
@@ -119,8 +117,13 @@
           box-shadow: none;
         }
 
+        p {
+          font-size: 14px;
+        }
+
         span {
           color: $vermillion;
+          font-size: 14px;
         }
       }
     }

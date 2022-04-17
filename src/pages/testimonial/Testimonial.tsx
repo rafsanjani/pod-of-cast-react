@@ -16,20 +16,18 @@ export type Testimonial = {
   name: string;
   text: string;
 };
-const hello = () => {
-  return "";
-};
+
 const testimonials = () => {
   let testimonials: Testimonial[] = [
     {
       name: "Luna LoveGood",
-      platform: spotify,
+      platform: googlePodcast,
       avatar: avatar_1,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
     },
     {
       name: "Emily Blunt",
-      platform: googlePodcast,
+      platform: spotify,
       avatar: avatar_2,
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
     },
@@ -80,7 +78,11 @@ export function Testimonials() {
             <img className="avatar" src={testimonial.avatar} alt="avatar-1" />
             <h6>{testimonial.name}</h6>
           </div>
-          <img className="social" src={testimonial.platform} alt="spotify" />
+          <img
+            className="streaming-platform"
+            src={testimonial.platform}
+            alt="spotify"
+          />
         </div>
       </div>
     );

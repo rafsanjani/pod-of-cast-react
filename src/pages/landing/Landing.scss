@@ -45,8 +45,10 @@
     font-size: 16px;
   }
 
-  .hero-content h1 span {
-    color: $vermillion;
+  .display {
+    span {
+      color: $vermillion;
+    }
   }
 
   .hero-content button {
@@ -55,35 +57,36 @@
   }
 
   .tiles {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
     justify-content: space-around;
+
+    img {
+      border-radius: 12px;
+      transition: all 0.3s ease 0s;
+      margin-right: 20px;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
   }
 
-  .tiles img {
-    border-radius: 12px;
-    transition: all 0.3s ease 0s;
-    margin-right: 20px;
+
+  .social-logos {
+
+    img {
+      width: 198px;
+      height: 30px;
+    }
   }
 
-  .tiles img:hover {
-    transform: scale(1.1);
-  }
-
-  .social-logos img {
-    width: 198px;
-    height: 30px;
-  }
-
+  $border: 1.5px solid $davysGrey;
 
   .platforms {
-    border-top: 1px solid #4D4D4D;
-    border-bottom: 1px solid #4D4D4D;
-    width: 90%;
+    border-top: $border;
+    border-bottom: $border;
+    width: 75%;
     flex-direction: row;
-    justify-content: center;
-    align-self: center;
+    justify-content: space-around;
     align-items: center;
     display: flex;
     margin: 50px 12px;

@@ -76,7 +76,7 @@ export function Benefits() {
         <h3>Become our sponsor and get all benefits</h3>
       </header>
       <BenefitsGrid benefits={benefits} />
-      <button className="button"> See Pricing</button>
+      <button className="button filled-button"> See Pricing</button>
     </section>
   );
 }

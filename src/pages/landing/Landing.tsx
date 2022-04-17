@@ -38,7 +38,7 @@ export function Landing() {
         subtitle="Podcast"
         paragraph="We cover all kinds of categories and a weekly special guest"
       >
-        <button className="button">Subscribe</button>
+        <button className="button filled-button">Subscribe</button>
       </LandingHero>
       <ImageList />
       <SocialLogos />
@@ -63,11 +63,11 @@ export function LandingHero(props: LandingHeroProps) {
     <div className="hero">
       <img className="spring" src={hero_shape_swirl} alt="spring" />
       <div className="hero-content">
-        <h1 className="tracking-tightest text-4xl lg:text-6xl md:text-4xl">
+        <div className="display">
           {props.title}
           <br />
           <span>{props.subtitle}</span>
-        </h1>
+        </div>
         <p>{props.paragraph}</p>
         {props.children}
       </div>
@@ -96,18 +96,14 @@ function ImageList() {
     );
   });
 
-  return (
-    <div className="tiles">
-      <ul> {imageItems}</ul>
-    </div>
-  );
+  return <ul className="horizontal-list tiles"> {imageItems}</ul>;
 }
 
 function SocialLogos() {
   return (
-    <div className="platforms">
-      <h1 className="font-bold tracking-tightest">Supported by</h1>
-      <ul className="social-logos">
+    <div className="platforms horizontal-list">
+      <h3 className="font-bold tracking-tightest">Supported by</h3>
+      <ul className="social-logos horizontal-list">
         <li>
           <img src={google} alt="Google" key="Google" />
         </li>

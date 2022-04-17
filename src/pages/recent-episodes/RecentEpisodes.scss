@@ -4,6 +4,7 @@
   padding: 30px;
   display: flex;
   width: 100vw;
+  background: $champagne;
   flex-direction: column;
 
   .recent-episodes-grid {
@@ -96,20 +97,16 @@
     font-weight: bold;
   }
 
-  .footer-content {
+  .tag {
     margin-top: 10px;
     height: 31px;
     display: flex;
     font-size: 12px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .tags li {
-    border: 1px solid $davysGrey;
     border-radius: 4px;
     margin-right: 10px;
+    border: 1px solid $davysGrey;
+    align-items: center;
+    padding: 10px;
   }
 
   .hosts {

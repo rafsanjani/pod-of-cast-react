@@ -74,13 +74,13 @@ function SocialLogos() {
     <Fragment>
       <ul className="social-logos">
         <li>
-          <img src={google} alt="Google" />
+          <img className="streaming-platform" src={google} alt="Google" />
         </li>
         <li>
-          <img src={spotify} alt="Google" />
+          <img className="streaming-platform" src={spotify} alt="Google" />
         </li>
         <li>
-          <img src={youtube} alt="Google" />
+          <img className="streaming-platform" src={youtube} alt="Google" />
         </li>
       </ul>
     </Fragment>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./Landing.css";
+import "./Landing.scss";
 import hero_shape_swirl from "../../images/hero-shape-swirl.svg";
 import stars from "../../images/stars.svg";
 import perplexed from "../../images/cover/perplexed-mind.png";

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./Testimonial.css";
+import "./Testimonial.scss";
 import sparkles from "../../images/sparkles.svg";
 import arrowLeft from "../../images/arrow-left-circle.svg";
 import arrowRight from "../../images/arrow-right-circle.svg";

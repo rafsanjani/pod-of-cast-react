@@ -6,7 +6,7 @@
 
   .top {
     display: grid;
-    background: $backgroundColor;
+    background: $background;
     height: 60%;
     padding-top: 30px;
     width: 100%;
@@ -17,7 +17,7 @@
     img {
       height: 472px;
       width: 472px;
-      box-shadow: 12px 12px 0 #81ADC8;
+      box-shadow: 12px 12px 0 $pewterblue;
       border-radius: 8px
     }
 
@@ -46,7 +46,7 @@
       }
 
       hr {
-        border: 1px solid black;
+        border: 1px solid $black;
         width: 100%;
         margin: 20px 0;
       }

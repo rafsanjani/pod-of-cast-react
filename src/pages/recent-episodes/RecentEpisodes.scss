@@ -1,3 +1,5 @@
+@import "../../app/theme";
+
 .recent-episodes {
   padding: 30px;
   display: flex;
@@ -30,7 +32,7 @@
     h4 {
       font-size: 14px;
       font-weight: bold;
-      color: #CD4631;
+      color: $vermillion;
     }
 
     h3 {
@@ -38,7 +40,7 @@
       padding: 0;
       font-weight: bold;
       text-align: start;
-      color: #CD4631;
+      color: $vermillion;
       font-size: 16px;
     }
 
@@ -51,7 +53,7 @@
     width: 30px;
     height: 30px;
     margin: -5px;
-    border: 2px solid #F7EDE8;
+    border: 2px solid $champaigne;
     border-radius: 50%;
   }
 
@@ -65,7 +67,7 @@
     img {
       width: 166px;
       border-radius: 12px;
-      background: #81ADC8;
+      background: $pewterblue;
     }
 
     .description {
@@ -79,7 +81,7 @@
 
   hr {
     margin: 15px 0;
-    background: #4D4D4D;
+    background: $davysGrey;
     width: 100%;
   }
 
@@ -105,7 +107,7 @@
   }
 
   .tags li {
-    border: 1px solid #4D4D4D;
+    border: 1px solid $davysGrey;
     border-radius: 4px;
     margin-right: 10px;
   }
@@ -138,7 +140,6 @@
 
   @media only screen and (max-width: 768px) {
     .recent-episodes-grid {
-      border: 1px solid red;
       grid-template-columns: repeat(1, 1fr);
     }
 
@@ -156,7 +157,6 @@
 
     p {
       font-size: 12px;
-      border: 1px solid red;
     }
   }
 
@@ -167,7 +167,6 @@
 
     .recent-episodes-grid {
       padding: 1px;
-      border: 1px solid red;
       display: flex;
       width: 100%;
       flex-direction: column;

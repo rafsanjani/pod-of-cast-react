@@ -1,85 +1,85 @@
 .benefits {
-    background: #ffffff;
-    padding: 30px;
-    align-items: center;
-    display: flex;
-}
+  background: #ffffff;
+  padding: 30px;
+  align-items: center;
+  display: flex;
 
-.benefits header {
+  header {
     display: flex;
     height: 150px;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-}
+  }
 
-.benefits header h1 {
+  .benefits header h1 {
     justify-self: start;
     align-self: start;
-}
+  }
 
-.benefits header div {
+  header div {
     display: flex;
-}
+  }
 
-.benefits-grid {
+  .benefits-grid {
     display: grid;
     grid-template: repeat(2, 1fr)/ repeat(3, 1fr);
     width: 100vw;
-}
+  }
 
-
-.benefits header img {
+  header img {
     width: 150px;
     align-self: center;
     margin-top: -80px;
     margin-left: -80px;
     height: 150px;
-}
+  }
 
-.benefits-grid .benefits-card {
+  .benefits-grid .benefits-card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+  }
 
-.benefits-card {
+  .benefits-card {
     font-size: 14px;
     margin: 50px;
     text-align: center;
-}
+  }
 
-.benefits button {
+  .benefits button {
     height: 50px;
     text-transform: uppercase;
     font-size: 14px;
     margin-bottom: 50px;
     font-weight: bold;
-}
+  }
 
-.benefits-card img {
+  .benefits-card img {
     height: 78px;
     width: 78px;
     margin-bottom: 30px;
-}
+  }
 
-@media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     .benefits-grid {
-        display: grid;
-        grid-template: repeat(1, 1fr)/ repeat(1, 1fr);
-        width: 100vw;
+      display: grid;
+      grid-template: repeat(1, 1fr)/ repeat(1, 1fr);
+      width: 100vw;
     }
 
-}
+  }
 
-@media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
     .benefits-card {
-        margin: 20px;
+      margin: 20px;
     }
 
     .benefits-card img {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
 
+  }
 }
+

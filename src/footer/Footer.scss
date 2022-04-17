@@ -1,3 +1,5 @@
+@import "../app/theme";
+
 footer {
   background: #fff;
   width: 100vw;
@@ -18,7 +20,7 @@ footer {
 
   .about-grid {
     margin: 50px 0;
-    border: 0.5px solid #4D4D4D;
+    border: 0.5px solid $davysGrey;
   }
 
   p {
@@ -86,7 +88,7 @@ footer {
   }
 
   hr {
-    border: 0.5px solid #4D4D4D;
+    border: 0.5px solid $davysGrey;
     width: 100%;
     margin: 50px 0;
     align-self: center;

@@ -53,9 +53,9 @@ function GetInTouch() {
   return (
     <Fragment>
       <div className="contact-us">
-        <h3 className="header">Get in touch</h3>
+        <h1>Get in touch</h1>
         <img className="header" src={ic_topic} alt="" />
-        <p>Send your message to us</p>
+        <h3>Send your message to us</h3>
       </div>
       <hr />
       <ContactUsForm />
@@ -131,7 +131,7 @@ function ContactUsForm() {
           <span>*</span> Required
         </p>
         <button
-          className="button"
+          className="button filled-button"
           onClick={(e) => {
             e.preventDefault();
             console.log(`${fullName} ${subject} ${phone} ${email} ${message}`);

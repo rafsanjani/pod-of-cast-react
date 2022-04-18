@@ -11,4 +11,5 @@ export interface Podcast {
   description: string;
   content: string;
   host: PodcastHost;
+  date: Date;
 }

@@ -29,6 +29,10 @@ type PodcastDetailProp = {
   podcast: Podcast | undefined;
 };
 
+interface Person {
+  name: string;
+}
+
 function PodcastDetailContent({ podcast }: PodcastDetailProp) {
   return (
     <section className="podcast-detail">
@@ -48,14 +52,20 @@ function PodcastDetailContent({ podcast }: PodcastDetailProp) {
               <p>Hosted by: </p>
               <p className="host-name">{podcast?.host.name}</p>
             </div>
-            <p>Sep 22, 2021</p>
+            <p>
+              {podcast?.date.toLocaleDateString("en-us", {
+                year: "numeric",
+                day: "numeric",
+                month: "short",
+              })}
+            </p>
           </div>
           <div className="bottom-buttons">
-            <button className="button filled-button">SUBSCRIBE</button>
-            <button className="button outline-button listen-now-btn">
+            <button className="button filled-button">Subscribe</button>
+            <button className="button outline-button  listen-now-btn">
               <img src={playButton} alt="" />
               <p>
-                LISTEN NOW <span>(46 min)</span>
+                Listen Now <span>(46 min)</span>
               </p>
             </button>
           </div>

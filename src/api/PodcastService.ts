@@ -17,6 +17,7 @@ const episodes: Podcast[] = [
     cover: covid19,
     title: "Pandemic Becoming Endemic",
     episode: 1,
+    date: new Date(),
     host: {
       name: "Jane doe",
       avatar: avatar1,
@@ -33,6 +34,7 @@ const episodes: Podcast[] = [
       name: "Jane doe",
       avatar: avatar2,
     },
+    date: new Date(),
     title: "Tesla Autopilot Controversy",
     episode: 2,
     content:
@@ -47,6 +49,7 @@ const episodes: Podcast[] = [
       name: "Jane doe",
       avatar: avatar3,
     },
+    date: new Date(),
     title: "Women's Rights? Is it alright?",
     episode: 3,
     tags: ["women's rights"],
@@ -59,6 +62,7 @@ const episodes: Podcast[] = [
     cover: selfConfidence,
     title: "How to Deal with Self–Confidence",
     episode: 4,
+    date: new Date(),
     host: {
       name: "Jane doe",
       avatar: janeDoe,
@@ -71,6 +75,7 @@ const episodes: Podcast[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
     cover: socialClass,
+    date: new Date(),
     title: "Type of Social Classes of People",
     host: {
       name: "Jane doe",
@@ -85,6 +90,7 @@ const episodes: Podcast[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
     cover: perplexedMind,
+    date: new Date(),
     host: {
       name: "Jane doe",
       avatar: janeDoe,

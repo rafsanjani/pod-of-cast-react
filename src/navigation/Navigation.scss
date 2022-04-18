@@ -26,31 +26,79 @@
       }
     }
 
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      transition: all 0.5s ease;
+
+      .dropdown-content {
+        display: none;
+        flex-direction: column;
+        text-align: start;
+        position: absolute;
+        background-color: $background;
+        min-width: 200px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        animation: fadeIn 1s;
+        z-index: 1;
+
+        ul {
+          align-items: start;
+          gap: 5px;
+        }
+
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+
     ul {
       display: flex;
       list-style-type: none;
       text-align: center;
+      gap: 20px;
       align-items: center;
+    }
+
+    .nav-link {
 
       li {
-        padding: 0 20px;
         display: inline-block;
       }
 
-      :hover::after {;
-        width: 100%;
+      div {
+        display: flex;
+        gap: 5px;
       }
 
+      a:hover::after {;
+        width: 100%;
+      }
 
       a::after {
         content: '';
         display: block;
         height: 4px;
+        border-radius: 8px;
         width: 0;
         background-color: rgba(0, 0, 0, 0.15);
         transition: all 0.5s;
       }
     }
+
 
     .left {
       display: flex;

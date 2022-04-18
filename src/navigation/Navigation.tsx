@@ -12,7 +12,7 @@ export function Navigation() {
             <img className="logo" src={Images.logo} alt="logo" />
           </Link>
           <ul>
-            <li>
+            <li className="nav-link">
               <Link
                 to={{
                   pathname: "/",
@@ -22,11 +22,26 @@ export function Navigation() {
                 Episodes
               </Link>
             </li>
-            <li>
+            <li className="nav-link">
               <Link to="about">About</Link>
             </li>
-            <li>
-              <a href="#">More</a>
+            <li className="nav-link dropdown">
+              <a href="">
+                <div>
+                  <p>More</p>
+                  <img src={Images.arrowDown} alt="" />
+                </div>
+              </a>
+              <div className="dropdown-content">
+                <ul className="vertical-list">
+                  <li>
+                    <a href="#">Article and News</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>

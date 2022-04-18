@@ -4,6 +4,10 @@
 .App {
   text-align: center;
   background: $background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 
   section {
     display: flex;

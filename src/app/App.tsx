@@ -11,7 +11,6 @@ export function App() {
     <div className="App">
       <Router>
         <Navigation />
-
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="about" element={<About />} />

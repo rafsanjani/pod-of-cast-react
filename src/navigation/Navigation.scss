@@ -1,79 +1,80 @@
 @import "../app/theme";
 
-nav {
+.nav-wrapper {
   height: 70px;
-  padding-top: 30px;
+  width: 100%;
   display: flex;
-  width: 90%;
-  margin: auto;
-  justify-content: space-between;
-  align-items: center;
+  background: $background;
 
-  .logo {
-    width: 74px;
-    height: 74px;
-  }
-
-  .buttons {
+  nav {
     display: flex;
-    align-items: center;
-
-    .recent-episodes {
-      width: 200px;
-      justify-content: center;
-      padding: 8px 20px;
-    }
-  }
-
-  ul {
-    display: flex;
-    list-style-type: none;
-    text-align: center;
-    align-items: center;
-
-    li {
-      padding: 0 20px;
-      display: inline-block;
-    }
-
-    :hover::after {;
-      width: 100%;
-    }
-
-
-    a::after {
-      content: '';
-      display: block;
-      height: 4px;
-      width: 0;
-      background-color: rgba(0, 0, 0, 0.15);
-      transition: all 0.5s;
-    }
-  }
-
-  .left {
-    width: 100%;
-    display: flex;
-    gap: 50px;
-  }
-
-
-  @media only screen and (max-width: 1024px) {
-    header {
-      height: 50px;
-      width: 100%;
-      font-size: 12px;
-    }
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
 
     .buttons {
-      text-transform: uppercase;
-      font-weight: bold;
-      padding: 0;
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      align-items: center;
+
+      .recent-episodes {
+        width: 200px;
+        justify-content: center;
+        padding: 8px 20px;
+      }
     }
 
-    .logo {
-      width: 30px;
-      height: 30px;
+    ul {
+      display: flex;
+      list-style-type: none;
+      text-align: center;
+      align-items: center;
+
+      li {
+        padding: 0 20px;
+        display: inline-block;
+      }
+
+      :hover::after {;
+        width: 100%;
+      }
+
+
+      a::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 0;
+        background-color: rgba(0, 0, 0, 0.15);
+        transition: all 0.5s;
+      }
+    }
+
+    .left {
+      display: flex;
+      gap: 50px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      header {
+        height: 50px;
+        width: 100%;
+        font-size: 12px;
+      }
+
+      .buttons {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 0;
+      }
+
+      .logo {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 }
+

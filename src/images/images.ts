@@ -13,6 +13,7 @@ import womenRights from "./cover/women-rights.png";
 import google from "./platforms/google-podcast.svg";
 import spotify from "./platforms/spotify.svg";
 import youtube from "./platforms/youtube.svg";
+import logo from "./logo.svg";
 
 export class Images {
   static avatar1 = avatar1;
@@ -29,4 +30,5 @@ export class Images {
   static selfConfidence = selfConfidence;
   static heroShapeSwirl = hero_shape_swirl;
   static stars = stars;
+  static logo = logo;
 }

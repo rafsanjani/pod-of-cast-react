@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./RecentEpisodes.scss";
 import { Link } from "react-router-dom";
 import { Podcast } from "../../model/Podcast";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { setPodcast } from "./recent-episodes-slice";
+import { useAppDataInit, useAppSelector } from "../../app/hooks";
 import janeDoe from "../../images/avatar/jane-doe.png";
 import avatar1 from "../../images/avatar/avatar-1.png";
 import avatar2 from "../../images/avatar/avatar-2.png";
@@ -52,65 +51,12 @@ function EpisodeList(prop: RecentEpisodeProp) {
 }
 
 export const RecentEpisodes = React.forwardRef<HTMLElement>((prop, ref) => {
+  useAppDataInit();
+
   const podcasts: Podcast[] = useAppSelector((state) => state.podcast.value);
-  const dispatch = useAppDispatch();
-  // const [numDogs, setNumDogs] = useState(10);
-
-  // const { data = [], isFetching } = useFetchBreedsQuery(numDogs);
-
-  // console.log(isFetching);
-
-  useEffect(() => {
-    if (podcasts.length === 0) {
-      dispatch(setPodcast());
-    }
-  }, []);
 
   return (
     <section className="recent-episodes" ref={ref}>
-      {/*<div>*/}
-      {/*  <p>Dogs to fetch:</p>*/}
-      {/*  <select*/}
-      {/*      name=""*/}
-      {/*      id=""*/}
-      {/*      value={numDogs}*/}
-      {/*      onChange={(e) => setNumDogs(Number(e.target.value))}*/}
-      {/*  >*/}
-      {/*    <option value="5">5</option>*/}
-      {/*    <option value="10">10</option>*/}
-      {/*    <option value="15">15</option>*/}
-      {/*    <option value="20">20</option>*/}
-      {/*  </select>*/}
-      {/*</div>*/}
-      {/*<div>*/}
-      {/*  <p>Number of dogs fetched: {data.length}</p>*/}
-      {/*  <table>*/}
-      {/*    <thead>*/}
-      {/*    <tr>*/}
-      {/*      <th>Name</th>*/}
-      {/*      <th>Picture</th>*/}
-      {/*    </tr>*/}
-      {/*    </thead>*/}
-
-      {/*    <tbody>*/}
-      {/*    {data.map((breed) => {*/}
-      {/*      return (*/}
-      {/*          <tr key={breed.id}>*/}
-      {/*            <td>{breed.name}</td>*/}
-      {/*            <td>*/}
-      {/*              <img*/}
-      {/*                  src={breed.image.url}*/}
-      {/*                  height="250"*/}
-      {/*                  width="250"*/}
-      {/*                  alt=""*/}
-      {/*              />*/}
-      {/*            </td>*/}
-      {/*          </tr>*/}
-      {/*      );*/}
-      {/*    })}*/}
-      {/*    </tbody>*/}
-      {/*  </table>*/}
-      {/*</div>*/}
       <h1>Recent Episodes</h1>
       <h3>Available on your favorite platform</h3>
       <EpisodeList episodes={podcasts} />

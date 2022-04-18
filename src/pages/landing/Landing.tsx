@@ -44,9 +44,9 @@ export function Landing() {
 }
 
 type LandingHeroProps = {
-  title: string;
-  subtitle: string;
-  paragraph: string;
+  title?: string;
+  subtitle?: string;
+  paragraph?: string;
   children: React.ReactNode;
 };
 

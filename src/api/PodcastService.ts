@@ -16,6 +16,7 @@ const episodes: Podcast[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
     cover: covid19,
     title: "Pandemic Becoming Endemic",
+    shortTitle: "COVID-19 Endemic",
     episode: 1,
     date: new Date(),
     host: {
@@ -30,6 +31,7 @@ const episodes: Podcast[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio",
     cover: teslaAutopilot,
+    shortTitle: "Tesla Autopilot",
     host: {
       name: "Jane doe",
       avatar: avatar2,
@@ -50,6 +52,7 @@ const episodes: Podcast[] = [
       avatar: avatar3,
     },
     date: new Date(),
+    shortTitle: "Women's rights",
     title: "Women's Rights? Is it alright?",
     episode: 3,
     tags: ["women's rights"],
@@ -63,6 +66,7 @@ const episodes: Podcast[] = [
     title: "How to Deal with Self–Confidence",
     episode: 4,
     date: new Date(),
+    shortTitle: "Self-confidence",
     host: {
       name: "Jane doe",
       avatar: janeDoe,
@@ -77,6 +81,7 @@ const episodes: Podcast[] = [
     cover: socialClass,
     date: new Date(),
     title: "Type of Social Classes of People",
+    shortTitle: "Social Class",
     host: {
       name: "Jane doe",
       avatar: janeDoe,
@@ -96,6 +101,7 @@ const episodes: Podcast[] = [
       avatar: janeDoe,
     },
     title: "Are you a Perplexed Mind Person?",
+    shortTitle: "Perplexed Mind",
     episode: 6,
     tags: ["mind-behaviour", "health"],
     content:

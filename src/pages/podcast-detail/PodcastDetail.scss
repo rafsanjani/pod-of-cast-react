@@ -1,18 +1,28 @@
 @import "../../app/theme";
 
 .podcast-detail {
-  padding: 30px;
+  display: grid !important;
   min-height: 100vh;
+
+  .landing-hero {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .stars {
+    margin-right: -50px;
+  }
 
   .top {
     display: grid;
+    grid-column: 1;
+    width: 85%;
+    grid-row: 1;
+    justify-self: center;
     background: $background;
+    margin-top: 50px;
     height: 60%;
-    padding-top: 30px;
-    width: 100%;
-    grid-gap: 30px;
-
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
 
     img {
       height: 472px;
@@ -22,15 +32,14 @@
     }
 
     .left {
-      margin-left: 50px;
       display: flex;
     }
 
     .right {
       display: flex;
       align-items: start;
+      margin: 30px 10px;
       flex-direction: column;
-      margin-right: 50px;
 
       h3 {
         font-weight: bold;

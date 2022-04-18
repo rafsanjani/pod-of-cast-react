@@ -5,6 +5,7 @@ export interface PodcastHost {
 
 export interface Podcast {
   title: string;
+  shortTitle: string;
   episode: number;
   cover: string;
   tags: string[];

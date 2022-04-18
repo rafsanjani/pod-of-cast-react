@@ -1,0 +1,42 @@
+@import "../../app/theme";
+
+.cover-container {
+  display: grid;
+
+  .stack-item {
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    grid-column: 1;
+
+    .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 47px;
+        letter-spacing: -8%;
+        color: $pewterBlue;
+        margin: 15px;
+        justify-content: start;
+        text-align: start;
+      }
+    }
+
+    img {
+      height: 30px;
+      width: 30px;
+      box-shadow: none;
+    }
+  }
+
+  .platform-icons {
+    display: flex;
+    gap: 20px;
+    margin: 30px;
+    justify-content: end;
+  }
+}

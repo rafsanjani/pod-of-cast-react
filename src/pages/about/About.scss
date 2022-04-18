@@ -88,7 +88,7 @@
       flex-direction: column;
     }
 
-    input {
+    .text-input {
       height: 64px;
       width: 100%;
       padding: 10px;
@@ -98,6 +98,11 @@
       border-radius: 8px;
       font-weight: bold;
       font-size: 16px;
+
+      &:focus-within {
+        outline: none;
+        border: 1.5px solid $vermillion;
+      }
     }
 
     label {
@@ -105,10 +110,6 @@
       font-size: 14px;
     }
 
-    input:focus-within {
-      outline: none !important;
-      border: 1.5px solid $vermillion;
-    }
 
     .message-area {
       grid-column: span 2;

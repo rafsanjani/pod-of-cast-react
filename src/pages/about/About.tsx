@@ -13,8 +13,8 @@ export function About() {
         paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit,  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam–quis."
       >
         <div className="about-buttons">
-          <button className="button outline-button">BECOME SPONSOR</button>
-          <button className="button filled-button">SUBSCRIBE</button>
+          <button className="button outline-button">Become Sponsor</button>
+          <button className="button filled-button">Subscribe</button>
         </div>
       </LandingHero>
       <AboutGrid />
@@ -72,7 +72,9 @@ function ContactUsForm() {
           Full name <span>*</span>
         </label>
         <input
+          className="text-input"
           type="text"
+          placeholder="John Doe"
           id="fullName"
           name="fullName"
           onInput={(e) => setFullName(e.currentTarget.value)}
@@ -83,7 +85,9 @@ function ContactUsForm() {
           Email <span>*</span>
         </label>
         <input
+          className="text-input"
           type="email"
+          placeholder="john@doe.com"
           id="email"
           name="email"
           onInput={(e) => setEmail(e.currentTarget.value)}
@@ -94,7 +98,9 @@ function ContactUsForm() {
           Phone <span>*</span>
         </label>
         <input
+          className="text-input"
           type="text"
+          placeholder="07438166633"
           id="phone"
           name="phone"
           onInput={(e) => setPhone(e.currentTarget.value)}
@@ -105,8 +111,10 @@ function ContactUsForm() {
           Subject <span>*</span>
         </label>
         <input
+          className="text-input"
           type="text"
           id="subject"
+          placeholder="Hello World!"
           name="subject"
           onInput={(e) => setSubject(e.currentTarget.value)}
         />
@@ -116,7 +124,9 @@ function ContactUsForm() {
           Message <span>*</span>
         </label>
         <textarea
+          className="text-input"
           id="message"
+          placeholder="Start typing something..."
           name="message"
           onInput={(e) => setMessage(e.currentTarget.value)}
         />

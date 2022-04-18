@@ -1,15 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import podcastReducer from "../pages/recent-episodes/recent-episodes-slice";
-import { apiSlice } from "../pages/recent-episodes/network-episodes-slice";
+import { dogsApiSlice } from "../pages/recent-episodes/network-episodes-slice";
 
 export const store = configureStore({
   reducer: {
     podcast: podcastReducer,
-    [apiSlice.reducerPath]: apiSlice.reducer,
+    [dogsApiSlice.reducerPath]: dogsApiSlice.reducer,
   },
 
   middleware: (getDefaultMiddleware) => {
-    return getDefaultMiddleware().concat(apiSlice.middleware);
+    return getDefaultMiddleware().concat(dogsApiSlice.middleware);
   },
 });
 

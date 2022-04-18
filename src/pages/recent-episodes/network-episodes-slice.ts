@@ -10,7 +10,7 @@ interface Breed {
   };
 }
 
-export const apiSlice = createApi({
+export const dogsApiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://api.thedogapi.com/v1",
@@ -22,12 +22,12 @@ export const apiSlice = createApi({
   endpoints(builder) {
     return {
       fetchBreeds: builder.query<Breed[], number | void>({
-        query(limit = 10) {
-          return `/breeds?limit=${limit}`;
+        query() {
+          return `/breeds?limit=${20}`;
         },
       }),
     };
   },
 });
 
-export const { useFetchBreedsQuery } = apiSlice;
+export const { useFetchBreedsQuery } = dogsApiSlice;

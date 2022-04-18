@@ -1,6 +1,6 @@
 @import "../app/theme";
 
-header {
+nav {
   height: 70px;
   padding-top: 30px;
   display: flex;
@@ -8,46 +8,21 @@ header {
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
-
-  .subscribe-button {
-    margin: 10px;
-    height: 40px;
-  }
 
   .logo {
     width: 74px;
     height: 74px;
   }
 
-  .top-buttons {
+  .buttons {
     display: flex;
     align-items: center;
 
     .recent-episodes {
       width: 200px;
-      color: $black;
       justify-content: center;
       padding: 8px 20px;
     }
-  }
-
-
-  .outline-button:hover {
-    transform: translateY(-5px);
-  }
-
-  ul li a::after {
-    content: '';
-    display: block;
-    height: 4px;
-    width: 0;
-    background: rgba(0, 0, 0, 0.15);
-    transition: all 0.5s;
-  }
-
-  ul li a:hover::after {;
-    width: 100%;
   }
 
   ul {
@@ -55,13 +30,33 @@ header {
     list-style-type: none;
     text-align: center;
     align-items: center;
-    justify-content: center;
+
+    li {
+      padding: 0 20px;
+      display: inline-block;
+    }
+
+    :hover::after {;
+      width: 100%;
+    }
+
+
+    a::after {
+      content: '';
+      display: block;
+      height: 4px;
+      width: 0;
+      background-color: rgba(0, 0, 0, 0.15);
+      transition: all 0.5s;
+    }
   }
 
-  ul li a {
-    padding: 0 20px;
-    display: inline-block;
+  .left {
+    width: 100%;
+    display: flex;
+    gap: 50px;
   }
+
 
   @media only screen and (max-width: 1024px) {
     header {
@@ -70,29 +65,15 @@ header {
       font-size: 12px;
     }
 
-    .top-buttons {
+    .buttons {
       text-transform: uppercase;
       font-weight: bold;
       padding: 0;
     }
 
-
-    button {
-      height: 50px;
-    }
-
-    ul li a {
-      padding: 5px;
-    }
-
     .logo {
       width: 30px;
       height: 30px;
-    }
-
-    .subscribe-button {
-      margin: 10px;
-      height: 40px;
     }
   }
 }

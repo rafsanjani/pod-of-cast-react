@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 export function Navigation() {
   return (
-    <header>
-      <Link to="/">
-        <img className="logo" src={logo} alt="logo" />
-      </Link>
-      <nav>
+    <nav>
+      <div className="left">
+        <Link to="/">
+          <img className="logo" src={logo} alt="logo" />
+        </Link>
         <ul>
           <li>
             <Link
@@ -28,17 +28,13 @@ export function Navigation() {
             <a href="#">More</a>
           </li>
         </ul>
-      </nav>
-      <div className="top-buttons">
-        <a href="#">
-          <button className="button outline-button recent-episodes">
-            Recent Episodes
-          </button>
-        </a>
-        <button className="button filled-button subscribe-button">
-          Subscribe
-        </button>
       </div>
-    </header>
+      <div className="buttons">
+        <button className="button outline-button recent-episodes">
+          Recent Episodes
+        </button>
+        <button className="button filled-button">Subscribe</button>
+      </div>
+    </nav>
   );
 }

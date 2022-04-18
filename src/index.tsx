@@ -2,14 +2,13 @@ import React from "react";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createRoot } from "react-dom/client";
-import { App } from "./app/App";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
+import { App } from "./app/App";
 
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
     <React.StrictMode>
-      <div></div>
       <App />
     </React.StrictMode>
   </Provider>

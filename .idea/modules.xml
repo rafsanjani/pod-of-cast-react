@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/react-test.iml" filepath="$PROJECT_DIR$/react-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pod-of-cast.iml" filepath="$PROJECT_DIR$/pod-of-cast.iml" />
     </modules>
   </component>
 </project>

@@ -28,10 +28,6 @@ type PodcastDetailProp = {
   podcast: Podcast | undefined;
 };
 
-interface Person {
-  name: string;
-}
-
 function PodcastDetailContent({ podcast }: PodcastDetailProp) {
   return (
     <section className="podcast-detail">

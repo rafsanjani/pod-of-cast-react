@@ -6,6 +6,7 @@ import { useAppDataInit, useAppSelector } from "../../app/hooks";
 import janeDoe from "../../images/avatar/jane-doe.png";
 import avatar1 from "../../images/avatar/avatar-1.png";
 import avatar2 from "../../images/avatar/avatar-2.png";
+import { PodcastTag } from "../../components/podcast-tag/PodcastTag";
 
 type RecentEpisodeProp = {
   episodes: Podcast[];
@@ -26,15 +27,10 @@ function EpisodeList(prop: RecentEpisodeProp) {
             </div>
           </div>
           <div className="card-footer">
-            <ul className="tags horizontal-list">
-              {podcast.tags.map((tag) => {
-                return (
-                  <li className="tag" key={tag}>
-                    {tag}
-                  </li>
-                );
-              })}
-            </ul>
+            <div className="tags-area">
+              <PodcastTag tags={podcast.tags} />
+            </div>
+
             <div className="hosts font-bold">
               <p>Hosted By:</p>
               <img className="footer-image" src={janeDoe} alt="" />

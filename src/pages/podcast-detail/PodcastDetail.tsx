@@ -6,6 +6,7 @@ import "./PodcastDetail.scss";
 import playButton from "../../images/icon-play.svg";
 import { PodcastCover } from "../../components/podcastcover/PodcastCover";
 import { LandingHero } from "../landing/Landing";
+import { PodcastTag } from "../../components/podcast-tag/PodcastTag";
 
 export function PodcastDetail() {
   useAppDataInit();
@@ -35,9 +36,7 @@ function PodcastDetailContent({ podcast }: PodcastDetailProp) {
   return (
     <section className="podcast-detail">
       <div className="landing-hero">
-        <LandingHero>
-          <p></p>
-        </LandingHero>
+        <LandingHero />
       </div>
       <div className="top">
         <div className="left">
@@ -45,6 +44,11 @@ function PodcastDetailContent({ podcast }: PodcastDetailProp) {
             podcast={podcast!}
             style={{ height: 472, width: 472 }}
           />
+
+          <div className="tags-area">
+            <p className="text-caption font-bold">Tags</p>
+            <PodcastTag tags={podcast?.tags} />
+          </div>
         </div>
         <div className="right">
           <h3>Episode {podcast?.episode}</h3>

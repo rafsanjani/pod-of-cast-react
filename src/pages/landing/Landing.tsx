@@ -47,7 +47,7 @@ type LandingHeroProps = {
   title?: string;
   subtitle?: string;
   paragraph?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export function LandingHero(props: LandingHeroProps) {

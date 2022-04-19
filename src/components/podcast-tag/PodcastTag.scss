@@ -1,0 +1,13 @@
+@import "../../app/theme";
+
+.podcast-tag {
+  height: 31px;
+  display: flex;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-right: 10px;
+  border: 1px solid $davysGrey;
+  align-items: center;
+  justify-self: start;
+  padding: 10px;
+}

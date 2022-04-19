@@ -33,6 +33,18 @@
 
     .left {
       display: flex;
+      flex-direction: column;
+      justify-items: start;
+      justify-content: start;
+      align-items: start;
+
+      .tags-area {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        gap: 50px;
+        align-items: center;
+      }
     }
 
     .right {

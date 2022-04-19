@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Podcast } from "../../model/Podcast";
 import { useAppDataInit, useAppSelector } from "../../app/hooks";
 import "./PodcastDetail.scss";
-import playButton from "../../images/icon-play.svg";
+import playButton from "../../icons/icon-play.svg";
 import { PodcastCover } from "../../components/podcastcover/PodcastCover";
 import { LandingHero } from "../../components/landing/Landing";
 import { PodcastTag } from "../../components/podcast-tag/PodcastTag";

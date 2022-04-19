@@ -1,7 +1,7 @@
 import "./About.scss";
 import React, { useState } from "react";
 import { LandingHero } from "../../components/landing/Landing";
-import ic_topic from "../../images/ic-topic.svg";
+import ic_topic from "../../icons/ic-topic.svg";
 import { Footer } from "../../footer/Footer";
 
 export function About() {

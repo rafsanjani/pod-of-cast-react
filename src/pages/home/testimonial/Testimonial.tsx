@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import "./Testimonial.scss";
-import sparkles from "../../../images/sparkles.svg";
-import arrowLeft from "../../../images/arrow-left-circle.svg";
-import arrowRight from "../../../images/arrow-right-circle.svg";
+import sparkles from "../../../icons/sparkles.svg";
+import arrowLeft from "../../../icons/arrow-left-circle.svg";
+import arrowRight from "../../../icons/arrow-right-circle.svg";
 import spotify from "../../../images/platforms/spotify.svg";
 import avatar_1 from "../../../images/avatar/avatar-1.png";
 import googlePodcast from "../../../images/platforms/google-podcast.svg";

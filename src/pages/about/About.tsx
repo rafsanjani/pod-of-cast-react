@@ -1,6 +1,6 @@
 import "./About.scss";
 import React, { useState } from "react";
-import { LandingHero } from "../landing/Landing";
+import { LandingHero } from "../../components/landing/Landing";
 import ic_topic from "../../images/ic-topic.svg";
 import { Footer } from "../../footer/Footer";
 

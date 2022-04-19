@@ -5,7 +5,7 @@ import { useAppDataInit, useAppSelector } from "../../app/hooks";
 import "./PodcastDetail.scss";
 import playButton from "../../images/icon-play.svg";
 import { PodcastCover } from "../../components/podcastcover/PodcastCover";
-import { LandingHero } from "../landing/Landing";
+import { LandingHero } from "../../components/landing/Landing";
 import { PodcastTag } from "../../components/podcast-tag/PodcastTag";
 
 export function PodcastDetail() {

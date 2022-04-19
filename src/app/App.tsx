@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import { Navigation } from "../navigation/Navigation";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Landing } from "../pages/landing/Landing";
+import { Landing } from "../components/landing/Landing";
 import { About } from "../pages/about/About";
 import { PodcastDetail } from "../pages/podcast-detail/PodcastDetail";
 

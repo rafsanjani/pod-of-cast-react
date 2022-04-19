@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Podcast } from "../../model/Podcast";
-import { getPodcastEpisodes } from "../../api/PodcastService";
+import { Podcast } from "../../../model/Podcast";
+import { getPodcastEpisodes } from "../../../api/PodcastService";
 
 interface PodcastState {
   value: Podcast[];

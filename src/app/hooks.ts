@@ -2,7 +2,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "./store";
 import { Podcast } from "../model/Podcast";
 import { useEffect } from "react";
-import { setPodcast } from "../pages/recent-episodes/recent-episodes-slice";
+import { setPodcast } from "../pages/home/recent-episodes/recent-episodes-slice";
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;

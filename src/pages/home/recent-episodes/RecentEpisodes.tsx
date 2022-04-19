@@ -1,12 +1,12 @@
 import React from "react";
 import "./RecentEpisodes.scss";
 import { Link } from "react-router-dom";
-import { Podcast } from "../../model/Podcast";
-import { useAppDataInit, useAppSelector } from "../../app/hooks";
-import janeDoe from "../../images/avatar/jane-doe.png";
-import avatar1 from "../../images/avatar/avatar-1.png";
-import avatar2 from "../../images/avatar/avatar-2.png";
-import { PodcastTag } from "../../components/podcast-tag/PodcastTag";
+import { Podcast } from "../../../model/Podcast";
+import { useAppDataInit, useAppSelector } from "../../../app/hooks";
+import janeDoe from "../../../images/avatar/jane-doe.png";
+import avatar1 from "../../../images/avatar/avatar-1.png";
+import avatar2 from "../../../images/avatar/avatar-2.png";
+import { PodcastTag } from "../../../components/podcast-tag/PodcastTag";
 
 type RecentEpisodeProp = {
   episodes: Podcast[];

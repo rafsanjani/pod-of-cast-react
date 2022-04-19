@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import "./Testimonial.scss";
-import sparkles from "../../images/sparkles.svg";
-import arrowLeft from "../../images/arrow-left-circle.svg";
-import arrowRight from "../../images/arrow-right-circle.svg";
-import spotify from "../../images/platforms/spotify.svg";
-import avatar_1 from "../../images/avatar/avatar-1.png";
-import googlePodcast from "../../images/platforms/google-podcast.svg";
-import avatar_2 from "../../images/avatar/avatar-2.png";
-import applePodcast from "../../images/platforms/apple-podcast.svg";
-import avatar_3 from "../../images/avatar/avatar-3.png";
+import sparkles from "../../../images/sparkles.svg";
+import arrowLeft from "../../../images/arrow-left-circle.svg";
+import arrowRight from "../../../images/arrow-right-circle.svg";
+import spotify from "../../../images/platforms/spotify.svg";
+import avatar_1 from "../../../images/avatar/avatar-1.png";
+import googlePodcast from "../../../images/platforms/google-podcast.svg";
+import avatar_2 from "../../../images/avatar/avatar-2.png";
+import applePodcast from "../../../images/platforms/apple-podcast.svg";
+import avatar_3 from "../../../images/avatar/avatar-3.png";
 
 export type Testimonial = {
   avatar: string;

@@ -1,11 +1,11 @@
 import React from "react";
 import "./Benfits.scss";
-import scribble from "../../images/scribble.svg";
-import topic from "../../images/ic-topic.svg";
-import shiningStars from "../../images/shining-stars.svg";
-import face from "../../images/face.svg";
-import fire from "../../images/fire.svg";
-import stars from "../../images/stars.svg";
+import scribble from "../../../images/scribble.svg";
+import topic from "../../../images/ic-topic.svg";
+import shiningStars from "../../../images/shining-stars.svg";
+import face from "../../../images/face.svg";
+import fire from "../../../images/fire.svg";
+import stars from "../../../images/stars.svg";
 
 type BenefitsScreenType = {
   image: string;

@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import "./Landing.scss";
 import "../../images/images";
-import { Benefits } from "../benefits/Benefits";
-import { RecentEpisodes } from "../recent-episodes/RecentEpisodes";
-import { BecomeOurSponsor } from "../become-our-sponsor/BecomeOurSponsor";
+import { Benefits } from "../../pages/home/benefits/Benefits";
+import { RecentEpisodes } from "../../pages/home/recent-episodes/RecentEpisodes";
+import { BecomeOurSponsor } from "../../pages/home/become-our-sponsor/BecomeOurSponsor";
 import { Footer } from "../../footer/Footer";
 import { useLocation } from "react-router-dom";
-import { Testimonials } from "../testimonial/Testimonial";
+import { Testimonials } from "../../pages/home/testimonial/Testimonial";
 import { Images } from "../../images/images";
 
 export function Landing() {

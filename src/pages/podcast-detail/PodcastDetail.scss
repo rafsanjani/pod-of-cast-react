@@ -53,6 +53,18 @@
       margin: 30px 10px;
       flex-direction: column;
 
+      .right-top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .featured{
+        border: 1px solid $vermillion;
+        padding: 4px;
+        border-radius: 4px;
+      }
+
       h3 {
         font-weight: bold;
         font-size: 16px;

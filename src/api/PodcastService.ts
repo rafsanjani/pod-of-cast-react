@@ -36,7 +36,8 @@ const episodes: Podcast[] = [
       name: "Jane doe",
       avatar: avatar2,
     },
-    date: new Date(),
+    date: new Date(2022, 1, 1),
+    isFeatured: true,
     title: "Tesla Autopilot Controversy",
     episode: 2,
     content:
@@ -71,6 +72,7 @@ const episodes: Podcast[] = [
       name: "Jane doe",
       avatar: janeDoe,
     },
+    isFeatured: true,
     tags: ["self-esteem", "health"],
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -100,6 +102,7 @@ const episodes: Podcast[] = [
       name: "Jane doe",
       avatar: janeDoe,
     },
+    isFeatured: true,
     title: "Are you a Perplexed Mind Person?",
     shortTitle: "Perplexed Mind",
     episode: 6,

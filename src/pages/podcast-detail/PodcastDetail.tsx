@@ -47,7 +47,12 @@ function PodcastDetailContent({ podcast }: PodcastDetailProp) {
           </div>
         </div>
         <div className="right">
-          <h3>Episode {podcast?.episode}</h3>
+          <div className="right-top">
+            <h3>Episode {podcast?.episode}</h3>
+            {podcast?.isFeatured && (
+              <h3 className="featured">Featured Episode</h3>
+            )}
+          </div>
           <h2>{podcast?.title}</h2>
           <hr />
           <p>{podcast?.content}</p>

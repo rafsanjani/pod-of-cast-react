@@ -11,6 +11,7 @@ export interface Podcast {
   tags: string[];
   description: string;
   content: string;
+  isFeatured?: boolean;
   host: PodcastHost;
   date: Date;
 }

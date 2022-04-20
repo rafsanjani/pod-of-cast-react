@@ -26,7 +26,7 @@ export function Navigation() {
               <Link to="about">About</Link>
             </li>
             <li className="nav-link dropdown">
-              <a href="">
+              <a href="#">
                 <div>
                   <p>More</p>
                   <img src={Images.arrowDown} alt="" />

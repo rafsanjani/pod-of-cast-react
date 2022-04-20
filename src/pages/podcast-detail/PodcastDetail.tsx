@@ -82,6 +82,7 @@ function PodcastDetailContent({ podcast }: PodcastDetailProp) {
           </div>
         </div>
       </div>
+      <div className="bottom-content">Hello</div>
     </section>
   );
 }

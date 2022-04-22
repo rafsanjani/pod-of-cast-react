@@ -15,6 +15,8 @@ import spotify from "./platforms/spotify.svg";
 import youtube from "./platforms/youtube.svg";
 import logo from "./logo.svg";
 import arrowDown from "../icons/arrow-down.svg";
+import sparkle from "../icons/sparkle.svg";
+import playButton from "../icons/icon-play.svg";
 
 export class Images {
   static avatar1 = avatar1;
@@ -33,4 +35,6 @@ export class Images {
   static stars = stars;
   static arrowDown = arrowDown;
   static logo = logo;
+  static sparkle = sparkle;
+  static playButton = playButton;
 }

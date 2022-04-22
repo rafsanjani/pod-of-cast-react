@@ -7,119 +7,6 @@
   background: $champagne;
   flex-direction: column;
 
-  .recent-episodes-grid {
-    align-content: center;
-    padding: 50px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    grid-gap: 20px;
-  }
-
-
-  .recent-episodes-card {
-    width: 100%;
-    aspect-ratio: 2.5;
-    padding: 20px;
-    background: #fff;
-    border: 2px solid #000;
-    justify-self: center;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: 12px;
-
-    h4 {
-      font-size: 14px;
-      font-weight: bold;
-      color: $vermillion;
-    }
-
-    h3 {
-      margin: 0;
-      padding: 0;
-      font-weight: bold;
-      text-align: start;
-      color: $vermillion;
-      font-size: 16px;
-    }
-
-    p {
-      text-align: start;
-    }
-  }
-
-  .footer-image {
-    width: 30px;
-    height: 30px;
-    margin: -5px;
-    border: 2px solid $champagne;
-    border-radius: 50%;
-  }
-
-  .top {
-    height: 80%;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .top {
-    img {
-      width: 166px;
-      border-radius: 12px;
-      background: $pewterBlue;
-    }
-
-    .description {
-      display: flex;
-      flex: 1;
-      align-items: flex-start;
-      flex-direction: column;
-      margin-left: 15px;
-    }
-  }
-
-  hr {
-    margin: 15px 0;
-    background: $davysGrey;
-    width: 100%;
-  }
-
-  .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-
-    .tags-area {
-      margin-top: 30px;
-    }
-  }
-
-  .hosted-by {
-    font-weight: bold;
-  }
-
-
-  .hosts {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-
-    p {
-      margin: 0 10px;
-    }
-  }
-
-  .description {
-
-    p {
-      overflow: hidden;
-      font-size: 16px;
-      text-overflow: ellipsis;
-    }
-  }
 
   .button {
     width: 200px;
@@ -128,73 +15,73 @@
     font-size: 14px;
   }
 
-  @media only screen and (max-width: 768px) {
-    .recent-episodes-grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
+  //@media only screen and (max-width: 768px) {
+  //  .recent-episodes-grid {
+  //    grid-template-columns: repeat(1, 1fr);
+  //  }
+  //
+  //  .recent-episodes-card h3 {
+  //    font-size: 14px;
+  //  }
+  //
+  //  .recent-episodes-card h4 {
+  //    font-size: 10px;
+  //  }
+  //
+  //  .top .description {
+  //    margin-left: 10px;
+  //  }
+  //
+  //  p {
+  //    font-size: 12px;
+  //  }
+  //}
 
-    .recent-episodes-card h3 {
-      font-size: 14px;
-    }
-
-    .recent-episodes-card h4 {
-      font-size: 10px;
-    }
-
-    .top .description {
-      margin-left: 10px;
-    }
-
-    p {
-      font-size: 12px;
-    }
-  }
-
-  @media only screen and (max-width: 1024px) {
-    .recent-episodes {
-      padding: 10px;
-    }
-
-    .recent-episodes-grid {
-      padding: 1px;
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-    }
-
-    .recent-episodes-card h3 {
-      font-size: 14px;
-    }
-
-    .recent-episodes-card {
-      width: 90%;
-      margin: auto;
-      /*height: 200px;*/
-    }
-
-    .recent-episodes-card h4 {
-      font-size: 10px;
-    }
-
-    .top .description {
-      margin-left: 10px;
-    }
-
-    .description p {
-      font-size: 12px;
-    }
-
-    .top {
-      height: 70%;
-    }
-
-    .top .image {
-      width: 130px;
-    }
-
-    button {
-      margin-top: 30px;
-    }
-  }
+  //@media only screen and (max-width: 1024px) {
+  //  .recent-episodes {
+  //    padding: 10px;
+  //  }
+  //
+  //  .recent-episodes-grid {
+  //    padding: 1px;
+  //    display: flex;
+  //    width: 100%;
+  //    flex-direction: column;
+  //  }
+  //
+  //  .recent-episodes-card h3 {
+  //    font-size: 14px;
+  //  }
+  //
+  //  .recent-episodes-card {
+  //    width: 90%;
+  //    margin: auto;
+  //    /*height: 200px;*/
+  //  }
+  //
+  //  .recent-episodes-card h4 {
+  //    font-size: 10px;
+  //  }
+  //
+  //  .top .description {
+  //    margin-left: 10px;
+  //  }
+  //
+  //  .description p {
+  //    font-size: 12px;
+  //  }
+  //
+  //  .top {
+  //    height: 70%;
+  //  }
+  //
+  //  .top .image {
+  //    width: 130px;
+  //  }
+  //
+  //  button {
+  //    margin-top: 30px;
+  //  }
+  //}
 }
 

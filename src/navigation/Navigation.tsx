@@ -35,7 +35,7 @@ export function Navigation() {
               <div className="dropdown-content">
                 <ul className="vertical-list">
                   <li>
-                    <a href="#">Article and News</a>
+                    <a>Article and News</a>
                   </li>
                   <li>
                     <a href="#">Blog</a>

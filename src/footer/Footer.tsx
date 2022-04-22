@@ -1,5 +1,6 @@
-import React, { Fragment } from "react";
-import "./Footer.scss";
+import React from "react";
+import styles from "./Footer.module.scss";
+import "../app/App.scss";
 import logo from "../images/logo.svg";
 import twitter from "../images/socials/twitter.svg";
 import tiktok from "../images/socials/tiktok.svg";
@@ -13,15 +14,15 @@ import googlePlay from "../images/platforms/google_play.svg";
 export function Footer() {
   return (
     <footer>
-      <div className="wrapper">
-        <div className="top">
-          <div className="footer-left">
-            <img className="logo" src={logo} alt="" />
+      <div className={styles.wrapper}>
+        <div className={styles.top}>
+          <div className={styles["footer-left"]}>
+            <img className={styles.logo} src={logo} alt="" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
               necessitatibus?
             </p>
-            <ul className="socials">
+            <ul className={styles.socials}>
               <li>
                 <img src={instagram} alt="" />
               </li>
@@ -33,17 +34,17 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          <ul>
+          <ul className={styles["footer-nav"]}>
             <li>About</li>
             <li className="text-red-700">Testimonials</li>
             <li>Features</li>
           </ul>
-          <ul>
+          <ul className={styles["footer-nav"]}>
             <li className="text-red-600">Episodes</li>
             <li>Pricing</li>
             <li>Blog</li>
           </ul>
-          <div className="footer-right">
+          <div className={styles["footer-right"]}>
             <p>Listen to episodes on your favorite platform:</p>
             <SocialLogos />
             <p>App available on</p>
@@ -58,7 +59,7 @@ export function Footer() {
 
 function AppStores() {
   return (
-    <ul className="app-stores">
+    <ul className={styles["app-stores"]}>
       <li>
         <img src={appStore} alt="" />
       </li>
@@ -71,18 +72,28 @@ function AppStores() {
 
 function SocialLogos() {
   return (
-    <Fragment>
-      <ul className="social-logos">
-        <li>
-          <img className="streaming-platform" src={google} alt="Google" />
-        </li>
-        <li>
-          <img className="streaming-platform" src={spotify} alt="Google" />
-        </li>
-        <li>
-          <img className="streaming-platform" src={youtube} alt="Google" />
-        </li>
-      </ul>
-    </Fragment>
+    <ul className={styles["social-logos"]}>
+      <li>
+        <img
+          className={styles["streaming-platform"]}
+          src={google}
+          alt="Google"
+        />
+      </li>
+      <li>
+        <img
+          className={styles["streaming-platform"]}
+          src={spotify}
+          alt="Google"
+        />
+      </li>
+      <li>
+        <img
+          className={styles["streaming-platform"]}
+          src={youtube}
+          alt="Google"
+        />
+      </li>
+    </ul>
   );
 }

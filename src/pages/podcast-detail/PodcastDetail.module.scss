@@ -1,9 +1,9 @@
 @import "../../app/theme";
 
 .podcast-detail {
-  max-height: 100vh;
   width: 100%;
   display: grid !important;
+  flex-direction: column;
 
   .landing-hero {
     grid-column: 1;
@@ -17,8 +17,8 @@
   .top {
     display: grid;
     grid-column: 1;
-    width: 85%;
     grid-row: 1;
+    width: 85%;
     justify-self: center;
     background: $background;
     margin-top: 50px;
@@ -167,7 +167,49 @@
 
   .bottom-content {
     background-color: $white;
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 50px;
+
+    .heading {
+      display: grid;
+    }
+
+    .sparkle {
+      grid-column: 1/1;
+      margin-left: -85px;
+      margin-top: -50px;
+      grid-row: 1/1;
+    }
+
+    .title {
+      grid-column: 1/1;
+      grid-row: 1/1;
+      margin-bottom: 50px;
+    }
+
+    .genre-nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .podcast-genre-list {
+        width: 80%;
+        justify-content: space-between;
+        display: flex;
+        font-size: 22px;
+        flex-direction: row;
+        margin-bottom: 30px;
+        line-height: 160%;
+      }
+
+      hr {
+        border: 1.5px solid $davysGrey;
+        width: 85%;
+      }
+    }
   }
 }

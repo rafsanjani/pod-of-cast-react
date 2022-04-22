@@ -29,7 +29,7 @@ footer {
   }
 
 
-  ul {
+  .footer-nav {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -38,15 +38,12 @@ footer {
     justify-content: start;
   }
 
-  .footer-left img {
-    height: 24px;
-    width: 24px;
-  }
 
   .social-logos {
     display: flex;
-    margin-bottom: 30px;
-    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 
   .app-stores {
@@ -65,19 +62,24 @@ footer {
     margin-right: 30px;
     justify-content: start;
     gap: 20px;
-  }
 
-  .footer-left .logo {
-    height: 74px;
-    width: 74px;
-  }
+    img {
+      height: 24px;
+      width: 24px;
+    }
 
-  .footer-left .socials {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: start;
-    gap: 10px;
+    .logo {
+      height: 74px;
+      width: 74px;
+    }
+
+    .socials {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: start;
+      gap: 10px;
+    }
   }
 
   .footer-right {
@@ -93,5 +95,15 @@ footer {
     margin: 50px 0;
     align-self: center;
     justify-self: center;
+  }
+
+  //todo: Remove this style after we convert App.css into a styled module
+  .streaming-platform {
+    width: 138px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    align-self: start;
+    object-fit: scale-down;
   }
 }

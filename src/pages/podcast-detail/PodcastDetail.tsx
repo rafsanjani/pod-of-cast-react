@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import { Podcast } from "../../model/Podcast";
 import { useAppDataInit, useAppSelector } from "../../app/hooks";
-import "./PodcastDetail.scss";
-import playButton from "../../icons/icon-play.svg";
-import { PodcastCover } from "../../components/podcastcover/PodcastCover";
-import { LandingHero } from "../../components/landing/Landing";
+import styles from "./PodcastDetail.module.scss";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { PodcastTag } from "../../components/podcast-tag/PodcastTag";
+import { Images } from "../../images/images";
+import { LandingHero } from "../../components/landing/Landing";
+import { PodcastCover } from "../../components/podcastcover/PodcastCover";
+import { Footer } from "../../footer/Footer";
 
 export function PodcastDetail() {
   useAppDataInit();
@@ -30,38 +31,38 @@ type PodcastDetailProp = {
 
 function PodcastDetailContent({ podcast }: PodcastDetailProp) {
   return (
-    <section className="podcast-detail">
-      <div className="landing-hero">
+    <section className={styles["podcast-detail"]}>
+      <div className={styles["landing-hero"]}>
         <LandingHero />
       </div>
-      <div className="top">
-        <div className="left">
+      <div className={styles["top"]}>
+        <div className={styles["left"]}>
           <PodcastCover
             podcast={podcast!}
             style={{ height: 472, width: 472 }}
           />
 
-          <div className="tags-area">
+          <div className={styles["tags-area"]}>
             <p className="text-caption font-bold">Tags</p>
             <PodcastTag tags={podcast?.tags} />
           </div>
         </div>
-        <div className="right">
-          <div className="right-top">
+        <div className={styles["right"]}>
+          <div className={styles["right-top"]}>
             <h3>Episode {podcast?.episode}</h3>
             {podcast?.isFeatured && (
-              <h3 className="featured">Featured Episode</h3>
+              <h3 className={styles["featured"]}>Featured Episode</h3>
             )}
           </div>
           <h2>{podcast?.title}</h2>
           <hr />
           <p>{podcast?.content}</p>
 
-          <div className="host">
-            <div className="hosted-by">
+          <div className={styles["host"]}>
+            <div className={styles["hosted-by"]}>
               <img src={podcast?.host.avatar} alt="Cover" />
               <p>Hosted by: </p>
-              <p className="host-name">{podcast?.host.name}</p>
+              <p className={styles["host-name"]}>{podcast?.host.name}</p>
             </div>
             <p>
               {podcast?.date.toLocaleDateString("en-us", {
@@ -71,10 +72,12 @@ function PodcastDetailContent({ podcast }: PodcastDetailProp) {
               })}
             </p>
           </div>
-          <div className="bottom-buttons">
+          <div className={styles["bottom-buttons"]}>
             <button className="button filled-button">Subscribe</button>
-            <button className="button outline-button  listen-now-btn">
-              <img src={playButton} alt="" />
+            <button
+              className={`button outline-button ${styles["listen-now-btn"]}`}
+            >
+              <img src={Images.playButton} alt="" />
               <p>
                 Listen Now <span>(46 min)</span>
               </p>
@@ -82,7 +85,44 @@ function PodcastDetailContent({ podcast }: PodcastDetailProp) {
           </div>
         </div>
       </div>
-      <div className="bottom-content">Hello</div>
+      <div className={styles["bottom-content"]}>
+        <div className={styles["heading"]}>
+          <h2 className={styles.title}>Latest Episode</h2>
+          <img className={styles.sparkle} src={Images.sparkle} alt="" />
+        </div>
+        <GenreNav />
+        <Footer />
+      </div>
     </section>
+  );
+}
+
+function GenreNav() {
+  useAppDataInit();
+
+  const podcasts: Podcast[] = useAppSelector((state) => state.podcast.value);
+
+  const genres: string[] = [
+    "All",
+    "Business",
+    "Comedy",
+    "Education",
+    "Health",
+    "News",
+    "Tech",
+  ];
+  const items = genres.map((genre) => (
+    <li key={genre}>
+      <a href="#">{genre}</a>
+    </li>
+  ));
+
+  return (
+    <>
+      <div className={styles["genre-nav"]}>
+        <ul className={styles["podcast-genre-list"]}>{items}</ul>
+        <hr />
+      </div>
+    </>
   );
 }

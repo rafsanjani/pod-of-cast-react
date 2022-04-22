@@ -8,6 +8,7 @@ import { Images } from "../../images/images";
 import { LandingHero } from "../../components/landing/Landing";
 import { PodcastCover } from "../../components/podcastcover/PodcastCover";
 import { Footer } from "../../footer/Footer";
+import {PodcastList} from "../../components/podcast-list/PodcastList";
 
 export function PodcastDetail() {
   useAppDataInit();
@@ -122,6 +123,7 @@ function GenreNav() {
       <div className={styles["genre-nav"]}>
         <ul className={styles["podcast-genre-list"]}>{items}</ul>
         <hr />
+        <PodcastList episodes={podcasts}/>
       </div>
     </>
   );

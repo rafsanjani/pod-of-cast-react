@@ -8,7 +8,7 @@ import { Images } from "../../images/images";
 import { LandingHero } from "../../components/landing/Landing";
 import { PodcastCover } from "../../components/podcastcover/PodcastCover";
 import { Footer } from "../../footer/Footer";
-import {PodcastList} from "../../components/podcast-list/PodcastList";
+import { PodcastList } from "../../components/podcast-list/PodcastList";
 
 export function PodcastDetail() {
   useAppDataInit();
@@ -56,7 +56,7 @@ function PodcastDetailContent({ podcast }: PodcastDetailProp) {
             )}
           </div>
           <h2>{podcast?.title}</h2>
-          <hr />
+          <hr className="hello" />
           <p>{podcast?.content}</p>
 
           <div className={styles["host"]}>
@@ -112,9 +112,19 @@ function GenreNav() {
     "News",
     "Tech",
   ];
+
+  const [currentGenre, setCurrentGenre] = useState(genres[0]);
+  console.log("Current Genre: "+ currentGenre)
+
   const items = genres.map((genre) => (
-    <li key={genre}>
-      <a href="#">{genre}</a>
+    <li
+      key={genre}
+      onClick={() => {
+        setCurrentGenre(genre);
+      }}
+      className={`${genre === currentGenre ? styles.selected : ""}`}
+    >
+      {genre}
     </li>
   ));
 
@@ -123,7 +133,7 @@ function GenreNav() {
       <div className={styles["genre-nav"]}>
         <ul className={styles["podcast-genre-list"]}>{items}</ul>
         <hr />
-        <PodcastList episodes={podcasts}/>
+        <PodcastList episodes={podcasts} genre={currentGenre} />
       </div>
     </>
   );

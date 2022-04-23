@@ -4,37 +4,38 @@ import janeDoe from "../../images/avatar/jane-doe.png";
 import avatar1 from "../../images/avatar/avatar-1.png";
 import avatar2 from "../../images/avatar/avatar-2.png";
 import React from "react";
-import "./PodcastList.scss";
+import styles from "./PodcastList.module.scss";
 import { Podcast } from "../../model/Podcast";
 
 type PodcastListProp = {
   episodes: Podcast[];
+  genre?: string;
 };
 
 export function PodcastList(prop: PodcastListProp) {
   const episodeListElements = prop.episodes.map((podcast) => {
     return (
       <Link to={`podcast/episode/${podcast.episode}`} key={podcast.title}>
-        <div className="podcast-card">
-          <div className="top">
-            <img className="image" src={podcast.cover} alt="episode" />
-            <div className="description">
+        <div className={styles["podcast-card"]}>
+          <div className={styles["top"]}>
+            <img className={styles.image} src={podcast.cover} alt="episode" />
+            <div className={styles.description}>
               <h4>Eps. {podcast.episode}</h4>
               <h3>{podcast.title}</h3>
-              <hr />
+              <hr className={styles.divider} />
               <p>{podcast.description}</p>
             </div>
           </div>
-          <div className="card-footer">
-            <div className="tags-area">
+          <div className={styles["card-footer"]}>
+            <div className={styles["tags-area"]}>
               <PodcastTag tags={podcast.tags} />
             </div>
 
-            <div className="hosts font-bold">
+            <div className={styles.hosts}>
               <p>Hosted By:</p>
-              <img className="footer-image" src={janeDoe} alt="" />
-              <img className="footer-image" src={avatar1} alt="" />
-              <img className="footer-image" src={avatar2} alt="" />
+              <img className={styles["footer-image"]} src={janeDoe} alt="" />
+              <img className={styles["footer-image"]} src={avatar1} alt="" />
+              <img className={styles["footer-image"]} src={avatar2} alt="" />
             </div>
           </div>
         </div>
@@ -42,5 +43,6 @@ export function PodcastList(prop: PodcastListProp) {
     );
   });
 
-  return <div className="podcast-list">{episodeListElements}</div>;
+  return <div className={styles["podcast-list"]}>{episodeListElements}</div>;
 }
+

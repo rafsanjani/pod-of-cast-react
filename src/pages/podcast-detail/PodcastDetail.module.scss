@@ -79,12 +79,6 @@
         letter-spacing: -0.02em;
       }
 
-      hr {
-        border: 1px solid $black;
-        width: 100%;
-        margin: 20px 0;
-      }
-
       p {
         color: $davysGrey;
         font-size: 16px;
@@ -172,6 +166,16 @@
     align-items: center;
     padding-top: 50px;
 
+    .selected{
+      color: $vermillion
+    }
+
+    hr {
+      border: 1px solid $black;
+      width: 85%;
+      margin-bottom: 50px;
+    }
+
     .heading {
       display: grid;
     }
@@ -183,10 +187,14 @@
       grid-row: 1/1;
     }
 
+    li{
+      transition: all 0.20s ease-in;
+    }
+
     .title {
       grid-column: 1/1;
       grid-row: 1/1;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     .genre-nav {
@@ -204,11 +212,10 @@
         flex-direction: row;
         margin-bottom: 30px;
         line-height: 160%;
-      }
 
-      hr {
-        border: 1.5px solid $davysGrey;
-        width: 85%;
+        li{
+          cursor: pointer;
+        }
       }
     }
   }

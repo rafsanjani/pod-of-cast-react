@@ -114,7 +114,6 @@ function GenreNav() {
   ];
 
   const [currentGenre, setCurrentGenre] = useState(genres[0]);
-  console.log("Current Genre: "+ currentGenre)
 
   const items = genres.map((genre) => (
     <li

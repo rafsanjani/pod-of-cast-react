@@ -9,11 +9,18 @@ import { Podcast } from "../../model/Podcast";
 
 type PodcastListProp = {
   episodes: Podcast[];
-  genre?: string;
+  genre: string;
 };
 
-export function PodcastList(prop: PodcastListProp) {
-  const episodeListElements = prop.episodes.map((podcast) => {
+export function PodcastList({ episodes, genre }: PodcastListProp) {
+  const filteredEpisodes =
+    genre === "All"
+      ? episodes
+      : episodes.filter((podcast) =>
+          podcast.tags.includes(genre.toLowerCase())
+        );
+
+  const elements = filteredEpisodes.map((podcast) => {
     return (
       <Link to={`podcast/episode/${podcast.episode}`} key={podcast.title}>
         <div className={styles["podcast-card"]}>
@@ -43,6 +50,8 @@ export function PodcastList(prop: PodcastListProp) {
     );
   });
 
-  return <div className={styles["podcast-list"]}>{episodeListElements}</div>;
+  if (elements.length === 0) {
+    return <h3 className="font-bold">No Podcast found</h3>;
+  }
+  return <div className={styles["podcast-list"]}>{elements}</div>;
 }
-

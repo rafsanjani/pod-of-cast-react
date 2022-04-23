@@ -1,4 +1,4 @@
-import "./About.scss";
+import styles from "./About.module.scss";
 import React, { useState } from "react";
 import { LandingHero } from "../../components/landing/Landing";
 import ic_topic from "../../icons/ic-topic.svg";
@@ -6,14 +6,18 @@ import { Footer } from "../../footer/Footer";
 
 export function About() {
   return (
-    <section className="about">
+    <section className={styles.about}>
       <LandingHero
         title="About"
         subtitle="Pod of Cast"
         paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit,  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam–quis."
       >
-        <div className="about-buttons">
-          <button className="button outline-button">Become Sponsor</button>
+        <div className={styles["about-buttons"]}>
+          <button
+            className={`button outline-button ${styles["outline-button"]}`}
+          >
+            Become Sponsor
+          </button>
           <button className="button filled-button">Subscribe</button>
         </div>
       </LandingHero>
@@ -28,10 +32,10 @@ function AboutGrid() {
   const count = [76, 128, 59];
 
   return (
-    <div className="about-grid">
+    <div className={styles["about-grid"]}>
       {count.map((count) => {
         return (
-          <div className="card" key={count}>
+          <div className={styles.card} key={count}>
             <h2>
               {count}
               <span>K</span>
@@ -47,9 +51,9 @@ function AboutGrid() {
 function GetInTouch() {
   return (
     <>
-      <div className="contact-us">
+      <div className={styles["contact-us"]}>
         <h1>Get in touch</h1>
-        <img className="header" src={ic_topic} alt="" />
+        <img className={styles.header} src={ic_topic} alt="" />
         <h3>Send your message to us</h3>
       </div>
       <hr />
@@ -67,12 +71,12 @@ function ContactUsForm() {
 
   return (
     <form>
-      <div className="input-field">
+      <div className={styles["input-field"]}>
         <label htmlFor="fullName">
           Full name <span>*</span>
         </label>
         <input
-          className="text-input"
+          className={styles["text-input"]}
           type="text"
           placeholder="John Doe"
           id="fullName"
@@ -80,12 +84,12 @@ function ContactUsForm() {
           onInput={(e) => setFullName(e.currentTarget.value)}
         />
       </div>
-      <div className="input-field">
+      <div className={styles["input-field"]}>
         <label htmlFor="email">
           Email <span>*</span>
         </label>
         <input
-          className="text-input"
+          className={styles["text-input"]}
           type="email"
           placeholder="john@doe.com"
           id="email"
@@ -93,12 +97,12 @@ function ContactUsForm() {
           onInput={(e) => setEmail(e.currentTarget.value)}
         />
       </div>
-      <div className="input-field">
+      <div className={styles["input-field"]}>
         <label htmlFor="phone">
           Phone <span>*</span>
         </label>
         <input
-          className="text-input"
+          className={styles["text-input"]}
           type="text"
           placeholder="07438166633"
           id="phone"
@@ -106,12 +110,12 @@ function ContactUsForm() {
           onInput={(e) => setPhone(e.currentTarget.value)}
         />
       </div>
-      <div className="input-field">
+      <div className={styles["input-field"]}>
         <label htmlFor="subject">
           Subject <span>*</span>
         </label>
         <input
-          className="text-input"
+          className={styles["text-input"]}
           type="text"
           id="subject"
           placeholder="Hello World!"
@@ -119,19 +123,19 @@ function ContactUsForm() {
           onInput={(e) => setSubject(e.currentTarget.value)}
         />
       </div>
-      <div className="input-field message-area">
+      <div className={`${styles["input-field"]} ${styles["message-area"]}`}>
         <label htmlFor="subject">
           Message <span>*</span>
         </label>
         <textarea
-          className="text-input"
+          className={styles["text-input"]}
           id="message"
           placeholder="Start typing something..."
           name="message"
           onInput={(e) => setMessage(e.currentTarget.value)}
         />
       </div>
-      <div className="form-footer">
+      <div className={styles["form-footer"]}>
         <p>
           <span>*</span> Required
         </p>

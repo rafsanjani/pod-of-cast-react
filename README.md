@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Implementating a Podcast app UI from Figma
+In my attempt to learn some CSS and React, I ended up finding this amazing podcast app design by Flowbase on Figma and decided to implement some of the pages in React. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## UI Design
+The UI is written in React and styled with CSS. Along the way, I learned about React CSS modules to deal with class name collisions so some of the pages are using CSS modules. I planned to use TailwindCSS to make it responsive but I'm not sure if I'll have enough energy to do that. 
 
-In the project directory, you can run:
+## Podcast Data
+The app serves static podcast data frmo a redux store. I decided to use the new and shiny Redux Toolkit(https://redux-toolkit.js.org/) library to preserve my sanity. I looked on the internet for a free podcast API but couldn't find any.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Screenshots
+## Landing Screen
+<img width="1330" alt="Screenshot 2022-05-03 at 15 28 40" src="https://user-images.githubusercontent.com/9197459/166472998-30a7f6c0-6a90-4713-8d68-4000e7c7b987.png">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About
+<img width="1124" alt="Screenshot 2022-05-03 at 15 12 17" src="https://user-images.githubusercontent.com/9197459/166473076-96d220c2-ba75-4224-ae38-52ed72421f40.png">
 
-### `npm test`
+## Contact
+<img width="1120" alt="Screenshot 2022-05-03 at 15 12 32" src="https://user-images.githubusercontent.com/9197459/166473132-d164c0f4-bff9-4e50-ab53-aed15705bbe5.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Podcast List
 
-### `npm run build`
+<img width="1121" alt="Screenshot 2022-05-03 at 15 12 48" src="https://user-images.githubusercontent.com/9197459/166473191-d4f94c9d-8a38-4ed7-baa8-130fed946421.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Podcast Detail
+<img width="1325" alt="Screenshot 2022-05-03 at 15 13 08" src="https://user-images.githubusercontent.com/9197459/166473257-8f59c5b4-e358-4bed-a390-ce20f6e0bd01.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Credits
+- A very big thank you to Flowbase for creating these amazing figma designs for the community. Check out some of their free community designs from https://www.figma.com/@flowbase.
+- The specific figma design I used can be found at: https://www.figma.com/community/file/1093368153627239554

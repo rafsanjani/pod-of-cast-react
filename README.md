@@ -11,6 +11,7 @@ The app serves static podcast data from a redux store. I decided to use the new 
 
 ## Known Issues
 - My implementation of React Router is seriously flawed. From the landing screen, a user can click on a podcast episode to navigate to the details screen with a route which looks like `/podcast/episode/1`. From the detail screen, they are able to select another podcast from the section below it. Clicking on a podcast from this screen appends the route to the existing route `/podcast/episode/1/podcast/episode/5` causing the app to render nothing. 
+- Failing CI. Please submit a PR if you can fix it. I want to see green ticks in all my projects.
 
 # Screenshots
 ## Landing Screen

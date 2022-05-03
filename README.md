@@ -9,6 +9,9 @@ The UI is written in React and styled with CSS. Along the way, I learned about R
 The app serves static podcast data from a redux store. I decided to use the new and shiny Redux Toolkit(https://redux-toolkit.js.org/) library to preserve my sanity. I looked on the internet for a free podcast API but couldn't find any.
 
 
+## Known Issues
+- My implementation of React Router is seriously flawed. From the landing screen, a user can click on a podcast episode to navigate to the details screen with a route which looks like `/podcast/episode/1`. From the detail screen, they are able to select another podcast from the section below it. Clicking on a podcast from this screen appends the route to the existing route `/podcast/episode/1/podcast/episode/5` causing the app to render nothing. 
+
 # Screenshots
 ## Landing Screen
 <img width="1330" alt="Screenshot 2022-05-03 at 15 28 40" src="https://user-images.githubusercontent.com/9197459/166472998-30a7f6c0-6a90-4713-8d68-4000e7c7b987.png">

@@ -6,7 +6,7 @@ In my attempt to learn some CSS and React, I ended up finding this amazing podca
 The UI is written in React and styled with CSS. Along the way, I learned about React CSS modules to deal with class name collisions so some of the pages are using CSS modules. I planned to use TailwindCSS to make it responsive but I'm not sure if I'll have enough energy to do that. 
 
 ## Podcast Data
-The app serves static podcast data frmo a redux store. I decided to use the new and shiny Redux Toolkit(https://redux-toolkit.js.org/) library to preserve my sanity. I looked on the internet for a free podcast API but couldn't find any.
+The app serves static podcast data from a redux store. I decided to use the new and shiny Redux Toolkit(https://redux-toolkit.js.org/) library to preserve my sanity. I looked on the internet for a free podcast API but couldn't find any.
 
 
 # Screenshots

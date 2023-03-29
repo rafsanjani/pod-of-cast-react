@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navigation.scss";
 import { Link } from "react-router-dom";
-import { Images } from "../images/images";
+import { Images } from "../../images/images";
 
 export function Navigation() {
   return (

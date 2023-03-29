@@ -2,7 +2,7 @@ import styles from "./About.module.scss";
 import React, { useState } from "react";
 import { LandingHero } from "../../components/landing/Landing";
 import ic_topic from "../../icons/ic-topic.svg";
-import { Footer } from "../../footer/Footer";
+import { Footer } from "../../components/footer/Footer";
 
 export function About() {
   return (

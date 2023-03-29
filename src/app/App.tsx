@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.scss";
-import { Navigation } from "../navigation/Navigation";
+import { Navigation } from "../components/navigation/Navigation";
 import {
   BrowserRouter as Router,
   Route,

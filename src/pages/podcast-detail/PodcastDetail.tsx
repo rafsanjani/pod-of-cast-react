@@ -7,7 +7,7 @@ import { PodcastTag } from "../../components/podcast-tag/PodcastTag";
 import { Images } from "../../images/images";
 import { LandingHero } from "../../components/landing/Landing";
 import { PodcastCover } from "../../components/podcastcover/PodcastCover";
-import { Footer } from "../../footer/Footer";
+import { Footer } from "../../components/footer/Footer";
 import { PodcastList } from "../../components/podcast-list/PodcastList";
 
 export function PodcastDetail() {

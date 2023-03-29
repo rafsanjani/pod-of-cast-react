@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import "../app/App.scss";
-import logo from "../images/logo.svg";
-import twitter from "../images/socials/twitter.svg";
-import tiktok from "../images/socials/tiktok.svg";
-import instagram from "../images/socials/instagram.svg";
-import google from "../images/platforms/google-podcast.svg";
-import spotify from "../images/platforms/spotify.svg";
-import youtube from "../images/platforms/youtube.svg";
-import appStore from "../images/platforms/app_store.svg";
-import googlePlay from "../images/platforms/google_play.svg";
+import "../../app/App.scss";
+import logo from "../../images/logo.svg";
+import twitter from "../../images/socials/twitter.svg";
+import tiktok from "../../images/socials/tiktok.svg";
+import instagram from "../../images/socials/instagram.svg";
+import google from "../../images/platforms/google-podcast.svg";
+import spotify from "../../images/platforms/spotify.svg";
+import youtube from "../../images/platforms/youtube.svg";
+import appStore from "../../images/platforms/app_store.svg";
+import googlePlay from "../../images/platforms/google_play.svg";
 
 export function Footer() {
   return (

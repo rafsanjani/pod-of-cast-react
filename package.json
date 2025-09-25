@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-buddy/ide-toolbox": "2.1.2",
+    "@react-buddy/ide-toolbox": "2.4.0",
     "@reduxjs/toolkit": "1.8.2",
     "@testing-library/jest-dom": "5.16.3",
     "@testing-library/react": "13.3.0",
